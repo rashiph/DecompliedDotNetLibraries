@@ -1,0 +1,23 @@
+﻿namespace System.Net.NetworkInformation
+{
+    using System;
+
+    internal enum IcmpV4Code
+    {
+        ICMP4_UNREACH_NET,
+        ICMP4_UNREACH_HOST,
+        ICMP4_UNREACH_PROTOCOL,
+        ICMP4_UNREACH_PORT,
+        ICMP4_UNREACH_FRAG_NEEDED,
+        ICMP4_UNREACH_SOURCEROUTE_FAILED,
+        ICMP4_UNREACH_NET_UNKNOWN,
+        ICMP4_UNREACH_HOST_UNKNOWN,
+        ICMP4_UNREACH_ISOLATED,
+        ICMP4_UNREACH_NET_ADMIN,
+        ICMP4_UNREACH_HOST_ADMIN,
+        ICMP4_UNREACH_NET_TOS,
+        ICMP4_UNREACH_HOST_TOS,
+        ICMP4_UNREACH_ADMIN
+    }
+}
+
