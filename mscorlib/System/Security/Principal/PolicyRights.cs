@@ -1,0 +1,23 @@
+﻿namespace System.Security.Principal
+{
+    using System;
+
+    [Flags]
+    internal enum PolicyRights
+    {
+        POLICY_AUDIT_LOG_ADMIN = 0x200,
+        POLICY_CREATE_ACCOUNT = 0x10,
+        POLICY_CREATE_PRIVILEGE = 0x40,
+        POLICY_CREATE_SECRET = 0x20,
+        POLICY_GET_PRIVATE_INFORMATION = 4,
+        POLICY_LOOKUP_NAMES = 0x800,
+        POLICY_NOTIFICATION = 0x1000,
+        POLICY_SERVER_ADMIN = 0x400,
+        POLICY_SET_AUDIT_REQUIREMENTS = 0x100,
+        POLICY_SET_DEFAULT_QUOTA_LIMITS = 0x80,
+        POLICY_TRUST_ADMIN = 8,
+        POLICY_VIEW_AUDIT_INFORMATION = 2,
+        POLICY_VIEW_LOCAL_INFORMATION = 1
+    }
+}
+
