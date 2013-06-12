@@ -5,7 +5,7 @@
 
     internal class BackCompatibleStringComparer : IEqualityComparer
     {
-        internal static IEqualityComparer Default = new BackCompatibleStringComparer();
+        internal static IEqualityComparer Default = new System.Collections.Specialized.BackCompatibleStringComparer();
 
         internal BackCompatibleStringComparer()
         {

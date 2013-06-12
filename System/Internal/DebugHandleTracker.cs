@@ -9,14 +9,14 @@
     {
         private static Hashtable handleTypes = new Hashtable();
         private static object internalSyncObject = new object();
-        private static DebugHandleTracker tracker = new DebugHandleTracker();
+        private static System.Internal.DebugHandleTracker tracker = new System.Internal.DebugHandleTracker();
 
         static DebugHandleTracker()
         {
             if ((System.ComponentModel.CompModSwitches.HandleLeak.Level > TraceLevel.Off) || System.ComponentModel.CompModSwitches.TraceCollect.Enabled)
             {
-                HandleCollector.HandleAdded += new HandleChangeEventHandler(tracker.OnHandleAdd);
-                HandleCollector.HandleRemoved += new HandleChangeEventHandler(tracker.OnHandleRemove);
+                System.Internal.HandleCollector.HandleAdded += new System.Internal.HandleChangeEventHandler(tracker.OnHandleAdd);
+                System.Internal.HandleCollector.HandleRemoved += new System.Internal.HandleChangeEventHandler(tracker.OnHandleRemove);
             }
         }
 
@@ -204,9 +204,9 @@
                 public readonly string callStack;
                 public readonly IntPtr handle;
                 public bool ignorableAsLeak;
-                public DebugHandleTracker.HandleType.HandleEntry next;
+                public System.Internal.DebugHandleTracker.HandleType.HandleEntry next;
 
-                public HandleEntry(DebugHandleTracker.HandleType.HandleEntry next, IntPtr handle)
+                public HandleEntry(System.Internal.DebugHandleTracker.HandleType.HandleEntry next, IntPtr handle)
                 {
                     this.handle = handle;
                     this.next = next;
@@ -220,7 +220,7 @@
                     }
                 }
 
-                public string ToString(DebugHandleTracker.HandleType type)
+                public string ToString(System.Internal.DebugHandleTracker.HandleType type)
                 {
                     StackParser parser = new StackParser(this.callStack);
                     parser.DiscardTo("HandleCollector.Add");

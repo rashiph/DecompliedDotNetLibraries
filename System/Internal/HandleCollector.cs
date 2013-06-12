@@ -10,9 +10,9 @@
         private static object internalSyncObject = new object();
         private static int suspendCount;
 
-        internal static  event HandleChangeEventHandler HandleAdded;
+        internal static  event System.Internal.HandleChangeEventHandler HandleAdded;
 
-        internal static  event HandleChangeEventHandler HandleRemoved;
+        internal static  event System.Internal.HandleChangeEventHandler HandleRemoved;
 
         internal static IntPtr Add(IntPtr handle, int type)
         {
@@ -108,11 +108,11 @@
                         flag = this.NeedCollection();
                         currentHandleCount = this.handleCount;
                     }
-                    lock (HandleCollector.internalSyncObject)
+                    lock (System.Internal.HandleCollector.internalSyncObject)
                     {
-                        if (HandleCollector.HandleAdded != null)
+                        if (System.Internal.HandleCollector.HandleAdded != null)
                         {
-                            HandleCollector.HandleAdded(this.name, handle, currentHandleCount);
+                            System.Internal.HandleCollector.HandleAdded(this.name, handle, currentHandleCount);
                         }
                     }
                     if (flag && flag)
@@ -134,7 +134,7 @@
 
             internal bool NeedCollection()
             {
-                if (HandleCollector.suspendCount <= 0)
+                if (System.Internal.HandleCollector.suspendCount <= 0)
                 {
                     if (this.handleCount > this.threshHold)
                     {
@@ -164,11 +164,11 @@
                         }
                         currentHandleCount = this.handleCount;
                     }
-                    lock (HandleCollector.internalSyncObject)
+                    lock (System.Internal.HandleCollector.internalSyncObject)
                     {
-                        if (HandleCollector.HandleRemoved != null)
+                        if (System.Internal.HandleCollector.HandleRemoved != null)
                         {
-                            HandleCollector.HandleRemoved(this.name, handle, currentHandleCount);
+                            System.Internal.HandleCollector.HandleRemoved(this.name, handle, currentHandleCount);
                         }
                     }
                 }
