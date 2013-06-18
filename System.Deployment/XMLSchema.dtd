@@ -1,0 +1,292 @@
+<!ENTITY % xs-datatypes PUBLIC 'datatypes' 'datatypes.dtd' >
+
+<!ENTITY % p 'xs:'> 
+<!ENTITY % s ':xs'> 
+<!ENTITY % nds 'xmlns%s;'>
+
+<!ENTITY % schema "%p;schema">
+<!ENTITY % complexType "%p;complexType">
+<!ENTITY % complexContent "%p;complexContent">
+<!ENTITY % simpleContent "%p;simpleContent">
+<!ENTITY % extension "%p;extension">
+<!ENTITY % element "%p;element">
+<!ENTITY % unique "%p;unique">
+<!ENTITY % key "%p;key">
+<!ENTITY % keyref "%p;keyref">
+<!ENTITY % selector "%p;selector">
+<!ENTITY % field "%p;field">
+<!ENTITY % group "%p;group">
+<!ENTITY % all "%p;all">
+<!ENTITY % choice "%p;choice">
+<!ENTITY % sequence "%p;sequence">
+<!ENTITY % any "%p;any">
+<!ENTITY % anyAttribute "%p;anyAttribute">
+<!ENTITY % attribute "%p;attribute">
+<!ENTITY % attributeGroup "%p;attributeGroup">
+<!ENTITY % include "%p;include">
+<!ENTITY % import "%p;import">
+<!ENTITY % redefine "%p;redefine">
+<!ENTITY % notation "%p;notation">
+
+<!ENTITY % annotation "%p;annotation">
+<!ENTITY % appinfo "%p;appinfo">
+<!ENTITY % documentation "%p;documentation">
+
+
+<!ENTITY % schemaAttrs ''>
+<!ENTITY % complexTypeAttrs ''>
+<!ENTITY % complexContentAttrs ''>
+<!ENTITY % simpleContentAttrs ''>
+<!ENTITY % extensionAttrs ''>
+<!ENTITY % elementAttrs ''>
+<!ENTITY % groupAttrs ''>
+<!ENTITY % allAttrs ''>
+<!ENTITY % choiceAttrs ''>
+<!ENTITY % sequenceAttrs ''>
+<!ENTITY % anyAttrs ''>
+<!ENTITY % anyAttributeAttrs ''>
+<!ENTITY % attributeAttrs ''>
+<!ENTITY % attributeGroupAttrs ''>
+<!ENTITY % uniqueAttrs ''>
+<!ENTITY % keyAttrs ''>
+<!ENTITY % keyrefAttrs ''>
+<!ENTITY % selectorAttrs ''>
+<!ENTITY % fieldAttrs ''>
+<!ENTITY % includeAttrs ''>
+<!ENTITY % importAttrs ''>
+<!ENTITY % redefineAttrs ''>
+<!ENTITY % notationAttrs ''>
+<!ENTITY % annotationAttrs ''>
+<!ENTITY % appinfoAttrs ''>
+<!ENTITY % documentationAttrs ''>
+
+<!ENTITY % complexDerivationSet "CDATA">
+      <!ENTITY % blockSet "CDATA">
+
+<!ENTITY % mgs '%all; | %choice; | %sequence;'>
+<!ENTITY % cs '%choice; | %sequence;'>
+<!ENTITY % formValues '(qualified|unqualified)'>
+
+
+<!ENTITY % attrDecls    '((%attribute;| %attributeGroup;)*,(%anyAttribute;)?)'>
+
+<!ENTITY % particleAndAttrs '((%mgs; | %group;)?, %attrDecls;)'>
+
+<!ENTITY % restriction1 '((%mgs; | %group;)?)'>
+
+%xs-datatypes;
+
+<!ELEMENT %schema; ((%include; | %import; | %redefine; | %annotation;)*,
+                    ((%simpleType; | %complexType;
+                      | %element; | %attribute;
+                      | %attributeGroup; | %group;
+                      | %notation; ),
+                     (%annotation;)*)* )>
+<!ATTLIST %schema;
+   targetNamespace      %URIref;               #IMPLIED
+   version              CDATA                  #IMPLIED
+   %nds;                %URIref;               #FIXED 'http://www.w3.org/2001/XMLSchema'
+   xmlns                CDATA                  #IMPLIED
+   finalDefault         %complexDerivationSet; ''
+   blockDefault         %blockSet;             ''
+   id                   ID                     #IMPLIED
+   elementFormDefault   %formValues;           'unqualified'
+   attributeFormDefault %formValues;           'unqualified'
+   xml:lang             CDATA                  #IMPLIED
+   %schemaAttrs;>
+ 
+
+<!ELEMENT %complexType; ((%annotation;)?,
+                         (%simpleContent;|%complexContent;|
+                          %particleAndAttrs;))>
+
+<!ATTLIST %complexType;
+          name      %NCName;                        #IMPLIED
+          id        ID                              #IMPLIED
+          abstract  %boolean;                       #IMPLIED
+          final     %complexDerivationSet;          #IMPLIED
+          block     %complexDerivationSet;          #IMPLIED
+          mixed (true|false) 'false'
+          %complexTypeAttrs;>
+
+<!ELEMENT %complexContent; ((%annotation;)?, (%restriction;|%extension;))>
+<!ATTLIST %complexContent;
+          mixed (true|false) #IMPLIED
+          id    ID           #IMPLIED
+          %complexContentAttrs;>
+
+<!ELEMENT %simpleContent; ((%annotation;)?, (%restriction;|%extension;))>
+<!ATTLIST %simpleContent;
+          id    ID           #IMPLIED
+          %simpleContentAttrs;>
+
+<!ELEMENT %extension; ((%annotation;)?, (%particleAndAttrs;))>
+<!ATTLIST %extension;
+          base  %QName;      #REQUIRED
+          id    ID           #IMPLIED
+          %extensionAttrs;>
+
+<!ELEMENT %element; ((%annotation;)?, (%complexType;| %simpleType;)?,
+                     (%unique; | %key; | %keyref;)*)>
+
+<!ATTLIST %element;
+            name               %NCName;               #IMPLIED
+            id                 ID                     #IMPLIED
+            ref                %QName;                #IMPLIED
+            type               %QName;                #IMPLIED
+            minOccurs          %nonNegativeInteger;   #IMPLIED
+            maxOccurs          CDATA                  #IMPLIED
+            nillable           %boolean;              #IMPLIED
+            substitutionGroup  %QName;                #IMPLIED
+            abstract           %boolean;              #IMPLIED
+            final              %complexDerivationSet; #IMPLIED
+            block              %blockSet;             #IMPLIED
+            default            CDATA                  #IMPLIED
+            fixed              CDATA                  #IMPLIED
+            form               %formValues;           #IMPLIED
+            %elementAttrs;>
+
+<!ELEMENT %group; ((%annotation;)?,(%mgs;)?)>
+<!ATTLIST %group; 
+          name        %NCName;               #IMPLIED
+          ref         %QName;                #IMPLIED
+          minOccurs   %nonNegativeInteger;   #IMPLIED
+          maxOccurs   CDATA                  #IMPLIED
+          id          ID                     #IMPLIED
+          %groupAttrs;>
+
+<!ELEMENT %all; ((%annotation;)?, (%element;)*)>
+<!ATTLIST %all;
+          minOccurs   (1)                    #IMPLIED
+          maxOccurs   (1)                    #IMPLIED
+          id          ID                     #IMPLIED
+          %allAttrs;>
+
+<!ELEMENT %choice; ((%annotation;)?, (%element;| %group;| %cs; | %any;)*)>
+<!ATTLIST %choice;
+          minOccurs   %nonNegativeInteger;   #IMPLIED
+          maxOccurs   CDATA                  #IMPLIED
+          id          ID                     #IMPLIED
+          %choiceAttrs;>
+
+<!ELEMENT %sequence; ((%annotation;)?, (%element;| %group;| %cs; | %any;)*)>
+<!ATTLIST %sequence;
+          minOccurs   %nonNegativeInteger;   #IMPLIED
+          maxOccurs   CDATA                  #IMPLIED
+          id          ID                     #IMPLIED
+          %sequenceAttrs;>
+
+<!ELEMENT %any; (%annotation;)?>
+<!ATTLIST %any;
+            namespace       CDATA                  '##any'
+            processContents (skip|lax|strict)      'strict'
+            minOccurs       %nonNegativeInteger;   '1'
+            maxOccurs       CDATA                  '1'
+            id              ID                     #IMPLIED
+            %anyAttrs;>
+
+<!ELEMENT %anyAttribute; (%annotation;)?>
+<!ATTLIST %anyAttribute;
+            namespace       CDATA              '##any'
+            processContents (skip|lax|strict)  'strict'
+            id              ID                 #IMPLIED
+            %anyAttributeAttrs;>
+
+<!ELEMENT %attribute; ((%annotation;)?, (%simpleType;)?)>
+<!ATTLIST %attribute;
+          name      %NCName;      #IMPLIED
+          id        ID            #IMPLIED
+          ref       %QName;       #IMPLIED
+          type      %QName;       #IMPLIED
+          use       (prohibited|optional|required) #IMPLIED
+          default   CDATA         #IMPLIED
+          fixed     CDATA         #IMPLIED
+          form      %formValues;  #IMPLIED
+          %attributeAttrs;>
+
+<!ELEMENT %attributeGroup; ((%annotation;)?,
+                       (%attribute; | %attributeGroup;)*,
+                       (%anyAttribute;)?) >
+<!ATTLIST %attributeGroup;
+                 name       %NCName;       #IMPLIED
+                 id         ID             #IMPLIED
+                 ref        %QName;        #IMPLIED
+                 %attributeGroupAttrs;>
+
+<!ELEMENT %unique; ((%annotation;)?, %selector;, (%field;)+)>
+<!ATTLIST %unique;
+          name     %NCName;       #REQUIRED
+	  id       ID             #IMPLIED
+	  %uniqueAttrs;>
+
+<!ELEMENT %key;    ((%annotation;)?, %selector;, (%field;)+)>
+<!ATTLIST %key;
+          name     %NCName;       #REQUIRED
+	  id       ID             #IMPLIED
+	  %keyAttrs;>
+
+<!ELEMENT %keyref; ((%annotation;)?, %selector;, (%field;)+)>
+<!ATTLIST %keyref;
+          name     %NCName;       #REQUIRED
+	  refer    %QName;        #REQUIRED
+	  id       ID             #IMPLIED
+	  %keyrefAttrs;>
+
+<!ELEMENT %selector; ((%annotation;)?)>
+<!ATTLIST %selector;
+          xpath %XPathExpr; #REQUIRED
+          id    ID          #IMPLIED
+          %selectorAttrs;>
+<!ELEMENT %field; ((%annotation;)?)>
+<!ATTLIST %field;
+          xpath %XPathExpr; #REQUIRED
+          id    ID          #IMPLIED
+          %fieldAttrs;>
+
+<!ELEMENT %include; (%annotation;)?>
+<!ATTLIST %include;
+          schemaLocation %URIref; #REQUIRED
+          id             ID       #IMPLIED
+          %includeAttrs;>
+
+<!ELEMENT %import; (%annotation;)?>
+<!ATTLIST %import;
+          namespace      %URIref; #IMPLIED
+          schemaLocation %URIref; #IMPLIED
+          id             ID       #IMPLIED
+          %importAttrs;>
+
+<!ELEMENT %redefine; (%annotation; | %simpleType; | %complexType; |
+                      %attributeGroup; | %group;)*>
+<!ATTLIST %redefine;
+          schemaLocation %URIref; #REQUIRED
+          id             ID       #IMPLIED
+          %redefineAttrs;>
+
+<!ELEMENT %notation; (%annotation;)?>
+<!ATTLIST %notation;
+	  name        %NCName;    #REQUIRED
+	  id          ID          #IMPLIED
+	  public      CDATA       #REQUIRED
+	  system      %URIref;    #IMPLIED
+	  %notationAttrs;>
+
+<!ELEMENT %annotation; (%appinfo; | %documentation;)*>
+<!ATTLIST %annotation; %annotationAttrs;>
+
+<!ELEMENT %appinfo; ANY>   
+<!ATTLIST %appinfo;
+          source     %URIref;      #IMPLIED
+          id         ID         #IMPLIED
+          %appinfoAttrs;>
+<!ELEMENT %documentation; ANY>   
+<!ATTLIST %documentation;
+          source     %URIref;   #IMPLIED
+          id         ID         #IMPLIED
+          xml:lang   CDATA      #IMPLIED
+          %documentationAttrs;>
+
+<!NOTATION XMLSchemaStructures PUBLIC
+           'structures' 'http://www.w3.org/2001/XMLSchema.xsd' >
+<!NOTATION XML PUBLIC
+           'REC-xml-1998-0210' 'http://www.w3.org/TR/1998/REC-xml-19980210' >

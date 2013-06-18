@@ -1,0 +1,23 @@
+﻿// Assembly System.Security, Version 4.0.0.0
+
+[assembly: System.Resources.SatelliteContractVersion("4.0.0.0")]
+[assembly: System.Reflection.AssemblyDelaySign(true)]
+[assembly: System.Reflection.AssemblyInformationalVersion("4.0.30319.1001")]
+[assembly: System.Resources.NeutralResourcesLanguage("en-US")]
+[assembly: System.Reflection.AssemblyKeyFile(@"f:\dd\Tools\devdiv\finalpublickey.snk")]
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyTitle("System.Security.dll")]
+[assembly: System.Runtime.InteropServices.ComVisible(false)]
+[assembly: System.CLSCompliant(true)]
+[assembly: System.Security.AllowPartiallyTrustedCallers]
+[assembly: System.Security.SecurityRules(System.Security.SecurityRuleSet.Level2, SkipVerificationInFullTrust=true)]
+[assembly: System.Reflection.AssemblyCompany("Microsoft Corporation")]
+[assembly: System.Reflection.AssemblyFileVersion("4.0.30319.1001")]
+[assembly: System.Reflection.AssemblyDefaultAlias("System.Security.dll")]
+[assembly: System.Reflection.AssemblyDescription("System.Security.dll")]
+[assembly: System.Reflection.AssemblyProduct("Microsoft\x00ae .NET Framework")]
+[assembly: System.Reflection.AssemblyCopyright("\x00a9 Microsoft Corporation.  All rights reserved.")]
+[assembly: System.Security.Permissions.SecurityPermission(System.Security.Permissions.SecurityAction.RequestMinimum, SkipVerification=true)]
+

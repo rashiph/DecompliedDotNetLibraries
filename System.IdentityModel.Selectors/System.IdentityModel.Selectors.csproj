@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ead28a17-4970-489b-8666-5ff72b0fa244</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.IdentityModel.Selectors</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SMDiagnostics" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Microsoft\InfoCards\SRDescriptionAttribute.cs" />
+    <Compile Include="Microsoft\InfoCards\SRCategoryAttribute.cs" />
+    <Compile Include="Microsoft\InfoCards\SR.cs" />
+    <Compile Include="System\IdentityModel\Selectors\CryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\ProofTokenCryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\AsymmetricCryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InternalRefCountedHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\HashCryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardAsymmetricCrypto.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcGenericXmlToken.cs" />
+    <Compile Include="System\IdentityModel\Selectors\CardSpaceSelector.cs" />
+    <Compile Include="System\IdentityModel\Selectors\ExceptionHelper.cs" />
+    <Compile Include="System\IdentityModel\Selectors\CardSpaceException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardKeyedHashAlgorithm.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardProofToken.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSACryptoProvider.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSAOAEPKeyExchangeDeformatter.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSAOAEPKeyExchangeFormatter.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSAPKCS1KeyExchangeDeformatter.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSAPKCS1KeyExchangeFormatter.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSAPKCS1SignatureDeformatter.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardRSAPKCS1SignatureFormatter.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardSymmetricAlgorithm.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InfoCardSymmetricCrypto.cs" />
+    <Compile Include="System\IdentityModel\Selectors\InternalPolicyElement.cs" />
+    <Compile Include="System\IdentityModel\Selectors\NativeMethods.cs" />
+    <Compile Include="System\IdentityModel\Selectors\NativePolicyElement.cs" />
+    <Compile Include="System\IdentityModel\Selectors\PolicyChain.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcAsymmetricCryptoParameters.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcHashCryptoParameters.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcInfoCardCryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcInfoCardOptions.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcSymmetricCryptoParameters.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcTokenRequestDetail.cs" />
+    <Compile Include="System\IdentityModel\Selectors\RpcTransformCryptoParameters.cs" />
+    <Compile Include="System\IdentityModel\Selectors\ServiceNotStartedException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\StsCommunicationException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\SymmetricCryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\ThrowOnMultipleAssignment!1.cs" />
+    <Compile Include="System\IdentityModel\Selectors\TransformCryptoHandle.cs" />
+    <Compile Include="System\IdentityModel\Selectors\UntrustedRecipientException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\UserCancellationException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\ServiceBusyException.cs" />
+    <Compile Include="Microsoft\InfoCards\InfoCardBaseException.cs" />
+    <Compile Include="Microsoft\InfoCards\UserCancelledException.cs" />
+    <Compile Include="Microsoft\InfoCards\InfoCardArgumentException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\IdentityValidationException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\PolicyValidationException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\UnsupportedPolicyOptionsException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\UIInitializationException.cs" />
+    <Compile Include="System\IdentityModel\Selectors\SafeTokenHandle.cs" />
+    <Compile Include="Microsoft\InfoCards\HGlobalSafeHandle.cs" />
+    <Compile Include="Microsoft\InfoCards\GlobalAllocSafeHandle.cs" />
+    <Compile Include="Microsoft\InfoCards\InfoCardCryptoHelper.cs" />
+    <Compile Include="System\IdentityModel\Selectors\CardSpacePolicyElement.cs" />
+    <Compile Include="System\IdentityModel\Selectors\CardSpaceShim.cs" />
+    <Compile Include="System\IdentityModel\Selectors\SafeLibraryHandle.cs" />
+    <Compile Include="Microsoft\InfoCards\Diagnostics\InfoCardTraceCode.cs" />
+    <Compile Include="Microsoft\InfoCards\Diagnostics\EventCode.cs" />
+    <Compile Include="Microsoft\InfoCards\Diagnostics\InfoCardEventCategory.cs" />
+    <Compile Include="Microsoft\InfoCards\Diagnostics\DiagnosticUtility.cs" />
+    <Compile Include="Microsoft\InfoCards\Diagnostics\InfoCardTrace.cs" />
+    <Compile Include="Microsoft\InfoCards\Diagnostics\InfoCardTraceRecord.cs" />
+    <EmbeddedResource Include="infocard.resources" />
+  </ItemGroup>
+</Project>

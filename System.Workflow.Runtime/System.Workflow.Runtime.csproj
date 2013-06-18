@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b59f65fc-f65a-4f02-bbef-57733ad980ed</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Workflow.Runtime</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Workflow\Runtime\ExecutionStringManager.cs" />
+    <Compile Include="DigestComparer.cs" />
+    <Compile Include="System\Workflow\Runtime\Configuration\WorkflowRuntimeSection.cs" />
+    <Compile Include="System\Workflow\Runtime\Configuration\WorkflowRuntimeServiceElement.cs" />
+    <Compile Include="System\Workflow\Runtime\Configuration\WorkflowRuntimeServiceElementCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\AmbientEnvironment.cs" />
+    <Compile Include="System\Workflow\Runtime\ServiceEnvironment.cs" />
+    <Compile Include="System\Workflow\Runtime\DebuggerThreadMarker.cs" />
+    <Compile Include="System\Workflow\Runtime\RuntimeEnvironment.cs" />
+    <Compile Include="System\Workflow\Runtime\CorrelationToken.cs" />
+    <Compile Include="System\Workflow\Runtime\CorrelationTokenCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\CorrelationProperty.cs" />
+    <Compile Include="System\Workflow\Runtime\CorrelationTokenEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\ExecutorLocksHeldException.cs" />
+    <Compile Include="System\Workflow\Runtime\IPendingWork.cs" />
+    <Compile Include="System\Workflow\Runtime\ISupportInterop.cs" />
+    <Compile Include="System\Workflow\Runtime\IWorkBatch.cs" />
+    <Compile Include="System\Workflow\Runtime\KeyedPriorityQueueHeadChangedEventArgs!1.cs" />
+    <Compile Include="System\Workflow\Runtime\KeyedPriorityQueue!3.cs" />
+    <Compile Include="System\Workflow\Runtime\LockFactory.cs" />
+    <Compile Include="System\Workflow\Runtime\LockPriorityOperator.cs" />
+    <Compile Include="System\Workflow\Runtime\InstanceLock.cs" />
+    <Compile Include="System\Workflow\Runtime\SchedulerLockGuard.cs" />
+    <Compile Include="System\Workflow\Runtime\SchedulerLockGuardInfo.cs" />
+    <Compile Include="System\Workflow\Runtime\MD5HashHelper.cs" />
+    <Compile Include="System\Workflow\Runtime\RTTrackingProfile.cs" />
+    <Compile Include="System\Workflow\Runtime\Scheduler.cs" />
+    <Compile Include="System\Workflow\Runtime\TimerEventSubscription.cs" />
+    <Compile Include="System\Workflow\Runtime\TimerEventSubscriptionCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\TrackingListenerFactory.cs" />
+    <Compile Include="System\Workflow\Runtime\TrackingListener.cs" />
+    <Compile Include="System\Workflow\Runtime\TrackingListenerBroker.cs" />
+    <Compile Include="System\Workflow\Runtime\TrackingProfileManager.cs" />
+    <Compile Include="System\Workflow\Runtime\TrackingChannelWrapper.cs" />
+    <Compile Include="System\Workflow\Runtime\Set!1.cs" />
+    <Compile Include="System\Workflow\Runtime\TrackingCallingState.cs" />
+    <Compile Include="System\Workflow\Runtime\HashHelper.cs" />
+    <Compile Include="System\Workflow\Runtime\QueueException.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkBatchState.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkBatch.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkBatchCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowDefinitionDispenser.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowDefinitionLock.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowEnvironment.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowExecutor.cs" />
+    <Compile Include="System\Workflow\Runtime\ScheduleWork.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowInstance.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowOwnershipException.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowQueue.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowQueuingService.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowRuntimeEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\FanOutOnKeyDictionary!2.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowRuntime.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowStateRollbackService.cs" />
+    <Compile Include="System\Workflow\Runtime\ContextActivityUtils.cs" />
+    <Compile Include="System\Workflow\Runtime\CreationContext.cs" />
+    <Compile Include="System\Workflow\Runtime\EventQueueState.cs" />
+    <Compile Include="System\Workflow\Runtime\ServicesExceptionNotHandledEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\TransactionalProperties.cs" />
+    <Compile Include="System\Workflow\Runtime\TransactionProcessState.cs" />
+    <Compile Include="System\Workflow\Runtime\VolatileResourceManager.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowCompletedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowSuspendedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowTerminatedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowDefinitionEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowEventInternal.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowQueueInfo.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowStatus.cs" />
+    <Compile Include="System\Workflow\Runtime\WorkflowTraceTransfer.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowRuntimeService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowLoaderService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowPersistenceService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowRuntimeServiceState.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowSchedulerService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowTimerService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowCommitWorkBatchService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\PersistenceException.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\BreakSafeBase!1.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\RegistryKeys.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\DebugController.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\IWorkflowDebuggerService.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\WorkflowDebuggerService.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\WorkflowDebuggerSteppingOption.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\WorkflowDebuggerSteppingAttribute.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\IInstanceTable.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\InstanceData.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\InstanceMap.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\InstanceTable.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\IWDEProgramNode.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\ProgramNode.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\WDEProgramPublisher.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\ProgramPublisher.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\IWDEProgramPublisher.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\NativeMethods.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\Guids.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\DebugControllerThread.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\ActivityHandlerDescriptor.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\DebugEngineCallback.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\IExpressionEvaluationFrame.cs" />
+    <Compile Include="System\Workflow\Runtime\DebugEngine\IWorkflowDebugger.cs" />
+    <Compile Include="System\Workflow\Runtime\DbRetry.cs" />
+    <Compile Include="System\Workflow\Runtime\PerformanceCounterOperation.cs" />
+    <Compile Include="System\Workflow\Runtime\PerformanceCounterAction.cs" />
+    <Compile Include="System\Workflow\Runtime\PerformanceCounterManager.cs" />
+    <Compile Include="System\Workflow\Runtime\PerformanceCounterData.cs" />
+    <Compile Include="System\Workflow\Runtime\PerformanceCounterActionMapping.cs" />
+    <Compile Include="System\Workflow\Runtime\PerformanceCounterStatement.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\Provider.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\DbResourceAllocator.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\DefaultWorkflowLoaderService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\DefaultWorkflowSchedulerService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\DefaultWorkflowCommitWorkBatchService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\LocalTransaction.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\ManualWorkflowSchedulerService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\SharedConnectionInfo.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\SharedConnectionWorkflowCommitWorkBatchService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\SqlPersistenceWorkflowInstanceDescription.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\PendingWorkItem.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\PersistenceDBAccessor.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\SqlWorkflowPersistenceService.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\SmartTimer.cs" />
+    <Compile Include="System\Workflow\Runtime\Hosting\WorkflowWebHostingModule.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ExtractCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\IProfileNotification.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\PreviousTrackingServiceAttribute.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\PropertyHelper.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ProfileUpdatedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ProfileRemovedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingService.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\SqlTrackingService.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingDataItem.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingChannel.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\SqlTrackingWorkflowInstance.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingAnnotationCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingCondition.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityTrackingCondition.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ComparisonOperator.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingConditionCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingDataItemValue.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingExtract.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\WorkflowDataTrackingExtract.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityDataTrackingExtract.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\WorkflowTrackingLocation.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityTrackingLocation.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\UserTrackingLocation.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TypeMatch.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityTrackingLocationCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\UserTrackingLocationCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingParameters.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingProfile.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingProfileCache.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingProfileDeserializationException.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingProfileSerializer.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingRecord.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityTrackingRecord.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\UserTrackingRecord.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\WorkflowTrackingRecord.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingWorkflowEvent.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingWorkflowChangedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingWorkflowTerminatedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingWorkflowSuspendedEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\TrackingWorkflowExceptionEventArgs.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityTrackPoint.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\UserTrackPoint.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\WorkflowTrackPoint.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\ActivityTrackPointCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\UserTrackPointCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\WorkflowTrackPointCollection.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\SqlTrackingQuery.cs" />
+    <Compile Include="System\Workflow\Runtime\Tracking\SqlTrackingQueryOptions.cs" />
+    <Compile Include="System\Activities\Statements\Interop.cs" />
+    <Compile Include="System\Activities\Statements\InteropEnvironment.cs" />
+    <Compile Include="System\Activities\Statements\InteropExecutor.cs" />
+    <Compile Include="System\Activities\Tracking\InteropTrackingRecord.cs" />
+    <EmbeddedResource Include="System.Workflow.Runtime.ExecutionStringManager.resources" />
+  </ItemGroup>
+</Project>

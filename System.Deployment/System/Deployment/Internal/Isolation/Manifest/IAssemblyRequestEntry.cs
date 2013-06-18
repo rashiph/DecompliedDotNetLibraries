@@ -1,0 +1,15 @@
+﻿namespace System.Deployment.Internal.Isolation.Manifest
+{
+    using System;
+    using System.Runtime.InteropServices;
+    using System.Security;
+
+    [ComImport, InterfaceType(ComInterfaceType.InterfaceIsIUnknown), Guid("2474ECB4-8EFD-4410-9F31-B3E7C4A07731")]
+    internal interface IAssemblyRequestEntry
+    {
+        System.Deployment.Internal.Isolation.Manifest.AssemblyRequestEntry AllData { [SecurityCritical] get; }
+        string Name { [return: MarshalAs(UnmanagedType.LPWStr)] [SecurityCritical] get; }
+        string permissionSetID { [return: MarshalAs(UnmanagedType.LPWStr)] [SecurityCritical] get; }
+    }
+}
+

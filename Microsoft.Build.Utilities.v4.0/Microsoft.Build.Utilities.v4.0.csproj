@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>bd4f5eb0-9fa8-4f6b-b240-e725700d4494</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Microsoft.Build.Utilities.v4.0</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Microsoft\Build\Shared\DirectoryGetFiles.cs" />
+    <Compile Include="Microsoft\Build\Shared\GetDirectories.cs" />
+    <Compile Include="Microsoft\Build\Shared\DirectoryExists.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileExists.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileCopy.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileDelete.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileCreate.cs" />
+    <Compile Include="Microsoft\Build\Collections\CopyOnWriteDictionary!2.cs" />
+    <Compile Include="Microsoft\Build\Collections\HybridDictionary!2.cs" />
+    <Compile Include="Microsoft\Build\Collections\EmptyEnumerable!1.cs" />
+    <Compile Include="Microsoft\Build\Shared\EncodingUtilities.cs" />
+    <Compile Include="Microsoft\Build\Shared\ErrorUtilities.cs" />
+    <Compile Include="Microsoft\Build\Shared\EscapingUtilities.cs" />
+    <Compile Include="Microsoft\Build\Shared\EventArgsFormatting.cs" />
+    <Compile Include="Microsoft\Build\Shared\ExceptionHandling.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileUtilities.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileMatcher.cs" />
+    <Compile Include="Microsoft\Build\Shared\FileUtilitiesRegex.cs" />
+    <Compile Include="Microsoft\Build\Shared\DotNetFrameworkArchitecture.cs" />
+    <Compile Include="Microsoft\Build\Shared\FrameworkLocationHelper.cs" />
+    <Compile Include="Microsoft\Build\Collections\HybridDictionaryBackingType.cs" />
+    <Compile Include="Microsoft\Build\Shared\InternalErrorException.cs" />
+    <Compile Include="Microsoft\Build\Collections\MSBuildNameIgnoreCaseComparer.cs" />
+    <Compile Include="Microsoft\Build\Shared\NativeMethodsShared.cs" />
+    <Compile Include="Microsoft\Build\Collections\ReadOnlyEmptyCollection!1.cs" />
+    <Compile Include="Microsoft\Build\Collections\ReadOnlyEmptyDictionary!2.cs" />
+    <Compile Include="Microsoft\Build\Collections\ReadOnlyEmptyList!1.cs" />
+    <Compile Include="Microsoft\Build\Shared\ResourceUtilities.cs" />
+    <Compile Include="Microsoft\Build\Internal\Tracing.cs" />
+    <Compile Include="Microsoft\Build\Utilities\AppDomainIsolatedTask.cs" />
+    <Compile Include="Microsoft\Build\Shared\AssemblyResources.cs" />
+    <Compile Include="Microsoft\Build\Utilities\CanonicalError.cs" />
+    <Compile Include="Microsoft\Build\Utilities\CommandLineBuilder.cs" />
+    <Compile Include="Microsoft\Build\Utilities\Logger.cs" />
+    <Compile Include="Microsoft\Build\Utilities\ProcessorArchitecture.cs" />
+    <Compile Include="Microsoft\Build\Utilities\Task.cs" />
+    <Compile Include="Microsoft\Build\Utilities\TaskItem.cs" />
+    <Compile Include="Microsoft\Build\Utilities\TaskLoggingHelper.cs" />
+    <Compile Include="Microsoft\Build\Utilities\TargetDotNetFrameworkVersion.cs" />
+    <Compile Include="Microsoft\Build\Utilities\DotNetFrameworkArchitecture.cs" />
+    <Compile Include="Microsoft\Build\Utilities\ToolLocationHelper.cs" />
+    <Compile Include="Microsoft\Build\Utilities\HostObjectInitializationStatus.cs" />
+    <Compile Include="Microsoft\Build\Utilities\ToolTask.cs" />
+    <Compile Include="Microsoft\Build\Utilities\CanonicalTrackedInputFiles.cs" />
+    <Compile Include="Microsoft\Build\Utilities\DependencyTableCache.cs" />
+    <Compile Include="Microsoft\Build\Utilities\DependencyTableCacheEntry.cs" />
+    <Compile Include="Microsoft\Build\Utilities\FlatTrackingData.cs" />
+    <Compile Include="Microsoft\Build\Utilities\UpToDateCheckType.cs" />
+    <Compile Include="Microsoft\Build\Utilities\NativeMethods.cs" />
+    <Compile Include="Microsoft\Build\Utilities\WIN32_FILE_ATTRIBUTE_DATA.cs" />
+    <Compile Include="Microsoft\Build\Utilities\ExecutableType.cs" />
+    <Compile Include="Microsoft\Build\Utilities\FileTracker.cs" />
+    <Compile Include="Microsoft\Build\Utilities\DependencyFilter.cs" />
+    <Compile Include="Microsoft\Build\Utilities\CanonicalTrackedOutputFiles.cs" />
+    <Compile Include="Microsoft\Build\Utilities\TrackedDependencies.cs" />
+    <Compile Include="Microsoft\Build\Utilities\CanonicalTrackedFilesHelper.cs" />
+    <Compile Include="Microsoft\Build\Utilities\VersionUtilities.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <EmbeddedResource Include="Microsoft.Build.Utilities.Strings.resources" />
+    <EmbeddedResource Include="Microsoft.Build.Utilities.Strings.shared.resources" />
+  </ItemGroup>
+</Project>

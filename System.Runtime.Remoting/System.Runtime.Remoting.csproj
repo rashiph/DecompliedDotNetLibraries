@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>16059a6e-3c0b-4c21-8011-351b9cc7af66</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Runtime.Remoting</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.DirectoryServices" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\CommonTransportKeys.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SinkChannelProtocol.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\ExclusiveTcpListener.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SocketCachePolicy.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\IAuthorizeRemotingConnection.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpClientChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpServerChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpServerTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpRemotingHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpRemotingHandlerFactory.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpHandlerTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpClientChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpServerChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpServerTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcServerChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcServerTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcClientChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcPort.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\PipeHandle.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BinaryClientFormatterSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BinaryClientFormatterSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BinaryServerFormatterSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BinaryServerFormatterSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SoapClientFormatterSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SoapClientFormatterSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SoapServerFormatterSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SoapServerFormatterSink.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\MetaData.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\ServiceType.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SdlChannelSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SdlChannelSink.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SUDSParserException.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SUDSGeneratorException.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SdlType.cs" />
+    <Compile Include="System\Runtime\Remoting\Services\RemotingClientProxy.cs" />
+    <Compile Include="System\Runtime\Remoting\Services\RemotingService.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BaseTransportHeaders.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BaseTransportHeadersEnumerator.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\BasicAsyncResult.cs" />
+    <Compile Include="System\IO\IByteBufferPool.cs" />
+    <Compile Include="System\IO\ByteBufferAllocator.cs" />
+    <Compile Include="System\IO\ByteBufferPool.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\ChunkedMemoryStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\CoreChannel.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\IisHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\RequestQueue.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SocketHandlerFactory.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\RemoteConnection.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\CachedSocket.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\CachedSocketList.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SocketCache.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\ValidateByteDelegate.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SocketHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\SocketStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\StreamHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\AsyncCopyStreamResult.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\StringHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\NativeMethods.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\DictionaryEnumeratorByKeys.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\AggregateDictionary.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpChannelHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpEncodingHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpClientTransportSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpClientTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\ErrorMessage.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpSocketHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpServerResponseStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpFixedLengthResponseStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpChunkedResponseStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpReadingStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpFixedLengthReadingStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpChunkedReadingStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpVersion.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\HttpServerSocketHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Http\RegistrationHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpChannelHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpClientTransportSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpClientTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpSocketHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpClientSocketHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpReadingStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpFixedLengthReadingStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpChunkedReadingStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpServerSocketHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpOperations.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpContentDelimiter.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpHeaders.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpHeaderFormat.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpStatusCode.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Tcp\TcpStringFormat.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\AsyncMessageDelegate.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcClientTransportSinkProvider.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcClientTransportSink.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcChannelHelper.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcServerHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\IpcClientHandler.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\PipeAsyncResult.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\PipeStream.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\PortConnection.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\ConnectionCache.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\SECURITY_ATTRIBUTES.cs" />
+    <Compile Include="System\Runtime\Remoting\Channels\Ipc\NativePipe.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SchemaBlockType.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SUDSParser.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SUDSGenerator.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\UrtType.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SUDSType.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\XsdVersion.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\SudsConverter.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\Util.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\WsdlParser.cs" />
+    <Compile Include="System\Runtime\Remoting\MetadataServices\WsdlGenerator.cs" />
+    <EmbeddedResource Include="System.Runtime.Remoting.resources" />
+  </ItemGroup>
+</Project>

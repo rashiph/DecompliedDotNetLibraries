@@ -1,0 +1,20 @@
+﻿namespace System.DirectoryServices.ActiveDirectory
+{
+    using System;
+
+    internal enum DS_REPL_INFO_TYPE
+    {
+        DS_REPL_INFO_NEIGHBORS,
+        DS_REPL_INFO_CURSORS_FOR_NC,
+        DS_REPL_INFO_METADATA_FOR_OBJ,
+        DS_REPL_INFO_KCC_DSA_CONNECT_FAILURES,
+        DS_REPL_INFO_KCC_DSA_LINK_FAILURES,
+        DS_REPL_INFO_PENDING_OPS,
+        DS_REPL_INFO_METADATA_FOR_ATTR_VALUE,
+        DS_REPL_INFO_CURSORS_2_FOR_NC,
+        DS_REPL_INFO_CURSORS_3_FOR_NC,
+        DS_REPL_INFO_METADATA_2_FOR_OBJ,
+        DS_REPL_INFO_METADATA_2_FOR_ATTR_VALUE
+    }
+}
+

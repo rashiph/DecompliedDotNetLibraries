@@ -1,0 +1,46 @@
+﻿namespace System.DirectoryServices.Protocols
+{
+    using System;
+
+    internal enum LdapOption
+    {
+        LDAP_OPT_API_FEATURE_INFO = 0x15,
+        LDAP_OPT_AREC_EXCLUSIVE = 0x98,
+        LDAP_OPT_AUTO_RECONNECT = 0x91,
+        LDAP_OPT_CLIENT_CERTIFICATE = 0x80,
+        LDAP_OPT_DEREF = 2,
+        LDAP_OPT_DESC = 1,
+        LDAP_OPT_DNSDOMAIN_NAME = 0x3b,
+        LDAP_OPT_ENCRYPT = 150,
+        LDAP_OPT_ERROR_NUMBER = 0x31,
+        LDAP_OPT_ERROR_STRING = 50,
+        LDAP_OPT_FAST_CONCURRENT_BIND = 0x41,
+        LDAP_OPT_GETDSNAME_FLAGS = 0x3d,
+        LDAP_OPT_HOST_NAME = 0x30,
+        LDAP_OPT_HOST_REACHABLE = 0x3e,
+        LDAP_OPT_PING_KEEP_ALIVE = 0x36,
+        LDAP_OPT_PING_LIMIT = 0x38,
+        LDAP_OPT_PING_WAIT_TIME = 0x37,
+        LDAP_OPT_PROMPT_CREDENTIALS = 0x3f,
+        LDAP_OPT_REFERRAL_CALLBACK = 0x70,
+        LDAP_OPT_REFERRAL_HOP_LIMIT = 0x10,
+        LDAP_OPT_REFERRALS = 8,
+        LDAP_OPT_RESTART = 9,
+        LDAP_OPT_ROOTDSE_CACHE = 0x9a,
+        LDAP_OPT_SASL_METHOD = 0x97,
+        LDAP_OPT_SECURITY_CONTEXT = 0x99,
+        LDAP_OPT_SEND_TIMEOUT = 0x42,
+        LDAP_OPT_SERVER_CERTIFICATE = 0x81,
+        LDAP_OPT_SERVER_ERROR = 0x33,
+        LDAP_OPT_SERVER_EXT_ERROR = 0x34,
+        LDAP_OPT_SIGN = 0x95,
+        LDAP_OPT_SIZELIMIT = 3,
+        LDAP_OPT_SSL = 10,
+        LDAP_OPT_SSL_INFO = 0x93,
+        LDAP_OPT_SSPI_FLAGS = 0x92,
+        LDAP_OPT_TCP_KEEPALIVE = 0x40,
+        LDAP_OPT_TIMELIMIT = 4,
+        LDAP_OPT_VERSION = 0x11
+    }
+}
+

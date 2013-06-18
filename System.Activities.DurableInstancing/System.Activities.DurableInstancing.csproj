@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b3ca7842-9655-47ee-bedf-6c62ecc45483</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Activities.DurableInstancing</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Activities\DurableInstancing\BinaryHeap!2.cs" />
+    <Compile Include="System\Activities\DurableInstancing\ILoadRetryStrategy.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadRetryConstantStrategy.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadRetryExponentialBackoffStrategy.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadRetryHandler.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadRetryStrategyFactory.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadRetryAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\CommandResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\InstanceLockedExceptionAction.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadType.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SqlWorkflowInstanceStoreAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\WorkflowOwnerAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\CreateWorkflowOwnerAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DeleteWorkflowOwnerAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\ExtendLockAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\InstanceCompletionAction.cs" />
+    <Compile Include="System\Activities\DurableInstancing\InstanceEncodingOption.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadWorkflowAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LoadWorkflowByKeyAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SaveWorkflowAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SqlWorkflowInstanceStore.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SqlWorkflowInstanceStoreConstants.cs" />
+    <Compile Include="System\Activities\DurableInstancing\StoreUtilities.cs" />
+    <Compile Include="System\Activities\DurableInstancing\ExtendLockCommand.cs" />
+    <Compile Include="System\Activities\DurableInstancing\InstanceLockTracking.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SqlCommandAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\UnlockInstanceAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\UnlockInstanceCommand.cs" />
+    <Compile Include="System\Activities\DurableInstancing\InstanceAlreadyLockedToOwnerException.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SuspensionStateChange.cs" />
+    <Compile Include="System\Activities\DurableInstancing\IObjectSerializer.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DefaultObjectSerializer.cs" />
+    <Compile Include="System\Activities\DurableInstancing\GZipObjectSerializer.cs" />
+    <Compile Include="System\Activities\DurableInstancing\ObjectSerializerFactory.cs" />
+    <Compile Include="System\Activities\DurableInstancing\PrimitiveType.cs" />
+    <Compile Include="System\Activities\DurableInstancing\XmlPropertyBag.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SerializationUtilities.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DeletedMetadataValue.cs" />
+    <Compile Include="System\Activities\DurableInstancing\CorrelationKey.cs" />
+    <Compile Include="System\Activities\DurableInstancing\RecoverInstanceLocksCommand.cs" />
+    <Compile Include="System\Activities\DurableInstancing\RecoverInstanceLocksAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DetectRunnableInstancesCommand.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DetectRunnableInstancesAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\TryLoadRunnableWorkflowAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DetectActivatableWorkflowsAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\QueryActivatableWorkflowAsyncResult.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DetectActivatableWorkflowsCommand.cs" />
+    <Compile Include="System\Activities\DurableInstancing\PersistenceTask.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DetectActivatableWorkflowsTask.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LockRecoveryTask.cs" />
+    <Compile Include="System\Activities\DurableInstancing\LockRenewalTask.cs" />
+    <Compile Include="System\Activities\DurableInstancing\DetectRunnableInstancesTask.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SqlWorkflowInstanceStoreLock.cs" />
+    <Compile Include="System\Activities\DurableInstancing\SR.cs" />
+    <Compile Include="System\Activities\DurableInstancing\TD.cs" />
+    <Compile Include="System\Activities\DurableInstancing\FxTrace.cs" />
+    <EmbeddedResource Include="System.Activities.DurableInstancing.SR.resources" />
+    <EmbeddedResource Include="System.Activities.DurableInstancing.TD.resources" />
+  </ItemGroup>
+</Project>

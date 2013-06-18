@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>178a2669-eb2e-4500-9c94-121d3affc3ed</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Web.ApplicationServices</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Web\Configuration\MembershipPasswordCompatibilityMode.cs" />
+    <Compile Include="System\Web\Security\MembershipCreateUserException.cs" />
+    <Compile Include="System\Web\Security\MembershipUserCollection.cs" />
+    <Compile Include="System\Web\Security\MembershipCreateStatus.cs" />
+    <Compile Include="System\Web\Security\MembershipPasswordFormat.cs" />
+    <Compile Include="System\Web\Security\MembershipProviderCollection.cs" />
+    <Compile Include="System\Web\Security\MembershipValidatePasswordEventHandler.cs" />
+    <Compile Include="System\Web\Security\ValidatePasswordEventArgs.cs" />
+    <Compile Include="System\Web\Security\IMembershipAdapter.cs" />
+    <Compile Include="System\Web\Security\DefaultMembershipAdapter.cs" />
+    <Compile Include="System\Web\Util\SystemWebProxy.cs" />
+    <Compile Include="System\Web\Security\MembershipProvider.cs" />
+    <Compile Include="System\Web\ApplicationServicesStrings.cs" />
+    <Compile Include="System\Web\Security\MembershipPasswordException.cs" />
+    <Compile Include="System\Web\Security\MembershipUser.cs" />
+    <Compile Include="System\Web\Security\RoleProvider.cs" />
+    <Compile Include="System\Web\Util\SecurityServices.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <EmbeddedResource Include="System.Web.ApplicationServicesStrings.resources" />
+  </ItemGroup>
+</Project>

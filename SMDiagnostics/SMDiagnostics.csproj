@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f2e2b4c2-c36a-4b0d-9b50-6398d81310fe</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>SMDiagnostics</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\TraceSRDescriptionAttribute.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\TraceSRCategoryAttribute.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\TraceSR.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\Activity.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\AssertUtility.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\DiagnosticTrace.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\PiiTraceSource.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\DiagnosticTraceSource.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\DiagnosticStrings.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\EventLogger.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\EventLogCategory.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\EventLogEventId.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\ExceptionUtility.cs" />
+    <Compile Include="System\ServiceModel\Configuration\MachineSettingsSection.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\NativeMethods.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\PlainXmlWriter.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\SafeEventLogWriteHandle.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\DiagnosticsTraceCode.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\TraceSourceKind.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\TraceXPathNavigator.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\EncodingFallbackAwareXmlTextWriter.cs" />
+    <Compile Include="System\ServiceModel\Diagnostics\Utility.cs" />
+    <EmbeddedResource Include="SMDiagnostics.resources" />
+  </ItemGroup>
+</Project>

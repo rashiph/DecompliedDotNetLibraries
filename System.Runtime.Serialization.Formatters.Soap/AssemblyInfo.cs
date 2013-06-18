@@ -1,0 +1,22 @@
+﻿// Assembly System.Runtime.Serialization.Formatters.Soap, Version 4.0.0.0
+
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Reflection.AssemblyKeyFile(@"f:\dd\Tools\devdiv\finalpublickey.snk")]
+[assembly: System.Reflection.AssemblyCompany("Microsoft Corporation")]
+[assembly: System.Reflection.AssemblyDelaySign(true)]
+[assembly: System.Runtime.InteropServices.ComVisible(true)]
+[assembly: System.CLSCompliant(true)]
+[assembly: System.Reflection.AssemblyTitle("System.Runtime.Serialization.Formatters.Soap.dll")]
+[assembly: System.Reflection.AssemblyDescription("System.Runtime.Serialization.Formatters.Soap.dll")]
+[assembly: System.Reflection.AssemblyDefaultAlias("System.Runtime.Serialization.Formatters.Soap.dll")]
+[assembly: System.Runtime.InteropServices.ComCompatibleVersion(1, 0, 0xce4, 0)]
+[assembly: System.Reflection.AssemblyProduct("Microsoft\x00ae .NET Framework")]
+[assembly: System.Reflection.AssemblyCopyright("\x00a9 Microsoft Corporation.  All rights reserved.")]
+[assembly: System.Reflection.AssemblyFileVersion("4.0.30319.1")]
+[assembly: System.Reflection.AssemblyInformationalVersion("4.0.30319.1")]
+[assembly: System.Resources.SatelliteContractVersion("4.0.0.0")]
+[assembly: System.Resources.NeutralResourcesLanguage("en-US")]
+[assembly: System.Runtime.AssemblyTargetedPatchBand("1.0.21-0")]
+

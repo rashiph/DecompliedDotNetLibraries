@@ -1,0 +1,21 @@
+﻿// Assembly System.Drawing.Design, Version 4.0.0.0
+
+[assembly: System.Reflection.AssemblyDefaultAlias("System.Drawing.Design.dll")]
+[assembly: System.Reflection.AssemblyCompany("Microsoft Corporation")]
+[assembly: System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
+[assembly: System.Runtime.InteropServices.ComVisible(false)]
+[assembly: System.CLSCompliant(true)]
+[assembly: System.Reflection.AssemblyTitle("System.Drawing.Design.dll")]
+[assembly: System.Reflection.AssemblyDescription("System.Drawing.Design.dll")]
+[assembly: System.Runtime.CompilerServices.CompilationRelaxations(8)]
+[assembly: System.Reflection.AssemblyProduct("Microsoft\x00ae .NET Framework")]
+[assembly: System.Reflection.AssemblyCopyright("\x00a9 Microsoft Corporation.  All rights reserved.")]
+[assembly: System.Reflection.AssemblyFileVersion("4.0.30319.1")]
+[assembly: System.Reflection.AssemblyInformationalVersion("4.0.30319.1")]
+[assembly: System.Resources.SatelliteContractVersion("4.0.0.0")]
+[assembly: System.Resources.NeutralResourcesLanguage("en-US")]
+[assembly: System.Reflection.AssemblyDelaySign(true)]
+[assembly: System.Reflection.AssemblyKeyFile(@"f:\dd\tools\devdiv\FinalPublicKey.snk")]
+[assembly: System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)]
+[assembly: System.Runtime.AssemblyTargetedPatchBand("1.0.21-0")]
+

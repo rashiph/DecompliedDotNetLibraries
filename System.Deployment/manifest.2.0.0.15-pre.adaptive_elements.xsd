@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asm.v3="urn:schemas-microsoft-com:asm.v3" xmlns:asm.v2="urn:schemas-microsoft-com:asm.v2" xmlns:asm.v1="urn:schemas-microsoft-com:asm.v1" xmlns:xrml="http://www.xrml.org/schema/2001/11/xrml2core" xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#" targetNamespace="urn:schemas-microsoft-com:asm.v2" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:include schemaLocation="manifest.2.0.0.15-pre.xsd" />
+<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.0.0.0.2.xsd" />
+<xs:import namespace="http://www.xrml.org/schema/2001/11/xrml2core" schemaLocation="xrml2core.0.0.0.1.xsd" />
+<xs:import namespace="urn:mpeg:mpeg21:2003:01-REL-R-NS" schemaLocation="mpeg-r.0.0.0.1.xsd" />
+    <xs:element name="dependentOS" type="asm.v2:dependentOSType" />
+    <xs:element name="hash" type="asm.v2:hashType" />
+    <xs:attribute name="optional" type="xs:boolean" default="false" />
+    <xs:attribute name="group" type="xs:string" />
+    <xs:attribute name="writeableType" />
+    <xs:attribute name="dependencyType" default="preRequisite" />
+    <xs:attribute name="codebase" type="xs:anyURI" />
+    <xs:attribute name="size" type="xs:integer" />
+    <xs:attribute name="hash" type="asm.v2:HashStringType" />
+    <xs:attribute name="hashalg" type="asm.v2:hashAlgorithmType" />
+    <xs:attribute name="description" type="xs:string" />
+    <xs:attribute name="supportUrl" type="xs:anyURI" />
+    <xs:attribute name="resourceFallbackCulture" type="xs:language" />
+    <xs:attribute name="resourceFallbackCultureInternal" type="xs:boolean" />
+    <xs:attribute name="allowDelayedBinding" type="xs:boolean" default="false" />
+    <xs:element name="noInherit" />
+    <xs:element name="noInheritable" />
+    <xs:element name="assemblyIdentity" type="asm.v2:assemblyIdentityType" />
+    <xs:element name="publisherIdentity" type="asm.v2:publisherIdentityType" />
+    <xs:element name="description" type="asm.v2:descriptionType" />
+    <xs:element name="application" />
+    <xs:element name="dependency" type="asm.v2:dependencyType" />
+    <xs:element name="file" type="asm.v2:fileType" />
+    <xs:element name="configuration" type="asm.v2:configurationType" />
+    <xs:element name="deployment" type="asm.v2:deploymentType" />
+    <xs:element name="entryPoint" type="asm.v2:entryPointType" />
+    <xs:element name="trustInfo" type="asm.v2:trustInfoType" />
+    <xs:element name="licensing" type="asm.v2:licensingType" />
+    <xs:element name="migration" type="asm.v2:migrationType" />
+    <xs:element name="clrClass" type="asm.v2:clrClassType" />
+    <xs:element name="clrSurrogate" type="asm.v2:clrSurrogateType" />
+    <xs:element name="comInterfaceExternalProxyStub" type="asm.v2:comInterfaceExternalProxyStubType" />
+    <xs:element name="KeyInfo" type="ds:KeyInfoType" />
+    <xs:attribute name="publisher" type="xs:string" />
+    <xs:attribute name="product" type="xs:string" />
+    <xs:attribute name="iconFile" type="xs:string" />
+</xs:schema>

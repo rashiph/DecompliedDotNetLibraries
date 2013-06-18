@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>111e8755-b3f3-4ee5-9269-8ecf3b943256</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Microsoft.Build.Framework</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xaml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildEngineResult.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\LazyFormattedBuildEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildErrorEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildStatusEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildFinishedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\MessageImportance.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildMessageEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildStartedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildWarningEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\CustomBuildEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\ExternalProjectFinishedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\ExternalProjectStartedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\IBuildEngine.cs" />
+    <Compile Include="Microsoft\Build\Framework\IBuildEngine2.cs" />
+    <Compile Include="Microsoft\Build\Framework\IBuildEngine3.cs" />
+    <Compile Include="Microsoft\Build\Framework\ITask.cs" />
+    <Compile Include="Microsoft\Build\Framework\IGeneratedTask.cs" />
+    <Compile Include="Microsoft\Build\Framework\IEventRedirector.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildMessageEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildErrorEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildWarningEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\CustomBuildEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildStartedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildFinishedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\ProjectStartedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\ProjectFinishedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\TargetStartedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\TargetFinishedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\TaskStartedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\TaskFinishedEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildStatusEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\AnyEventHandler.cs" />
+    <Compile Include="Microsoft\Build\Framework\IEventSource.cs" />
+    <Compile Include="Microsoft\Build\Framework\ILogger.cs" />
+    <Compile Include="Microsoft\Build\Framework\INodeLogger.cs" />
+    <Compile Include="Microsoft\Build\Framework\IForwardingLogger.cs" />
+    <Compile Include="Microsoft\Build\Framework\LoggerVerbosity.cs" />
+    <Compile Include="Microsoft\Build\Framework\ICancelableTask.cs" />
+    <Compile Include="Microsoft\Build\Framework\ITaskFactory.cs" />
+    <Compile Include="Microsoft\Build\Framework\ITaskHost.cs" />
+    <Compile Include="Microsoft\Build\Framework\ITaskItem.cs" />
+    <Compile Include="Microsoft\Build\Framework\ITaskItem2.cs" />
+    <Compile Include="Microsoft\Build\Framework\LoadInSeparateAppDomainAttribute.cs" />
+    <Compile Include="Microsoft\Build\Framework\LoggerException.cs" />
+    <Compile Include="Microsoft\Build\Framework\BuildEventContext.cs" />
+    <Compile Include="Microsoft\Build\Framework\OutputAttribute.cs" />
+    <Compile Include="Microsoft\Build\Framework\ProjectFinishedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\ProjectStartedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\RequiredAttribute.cs" />
+    <Compile Include="Microsoft\Build\Framework\RequiredRuntimeAttribute.cs" />
+    <Compile Include="Microsoft\Build\Framework\RunInMTAAttribute.cs" />
+    <Compile Include="Microsoft\Build\Framework\RunInSTAAttribute.cs" />
+    <Compile Include="Microsoft\Build\Framework\TargetFinishedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\TargetStartedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\TaskCommandLineEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\TaskFinishedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\TaskPropertyInfo.cs" />
+    <Compile Include="Microsoft\Build\Framework\TaskStartedEventArgs.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\Argument.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\BaseProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\BoolProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\CategorySchema.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\Category.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\IProjectSchemaNode.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\ContentType.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\DataSource.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\DynamicEnumProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\EnumProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\EnumValue.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\FileExtension.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\IntProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\ItemType.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\NameValuePair.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\ProjectSchemaDefinitions.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\RuleSchema.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\Rule.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\RuleBag.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\StringListProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\StringProperty.cs" />
+    <Compile Include="Microsoft\Build\Framework\XamlTypes\ValueEditor.cs" />
+  </ItemGroup>
+</Project>

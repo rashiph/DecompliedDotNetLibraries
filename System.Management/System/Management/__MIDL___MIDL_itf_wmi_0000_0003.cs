@@ -1,0 +1,21 @@
+﻿namespace System.Management
+{
+    using System;
+
+    internal enum __MIDL___MIDL_itf_wmi_0000_0003
+    {
+        WMIQ_ASSOCQ_ASSOCCLASS = 8,
+        WMIQ_ASSOCQ_ASSOCIATORS = 1,
+        WMIQ_ASSOCQ_CLASSDEFSONLY = 0x100,
+        WMIQ_ASSOCQ_CLASSREFSONLY = 0x800,
+        WMIQ_ASSOCQ_KEYSONLY = 0x200,
+        WMIQ_ASSOCQ_REFERENCES = 2,
+        WMIQ_ASSOCQ_REQUIREDASSOCQUALIFIER = 0x80,
+        WMIQ_ASSOCQ_REQUIREDQUALIFIER = 0x40,
+        WMIQ_ASSOCQ_RESULTCLASS = 4,
+        WMIQ_ASSOCQ_RESULTROLE = 0x20,
+        WMIQ_ASSOCQ_ROLE = 0x10,
+        WMIQ_ASSOCQ_SCHEMAONLY = 0x400
+    }
+}
+

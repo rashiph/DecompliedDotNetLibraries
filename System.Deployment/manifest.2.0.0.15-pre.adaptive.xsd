@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:asm.v3="urn:schemas-microsoft-com:asm.v3" xmlns:asm.v2="urn:schemas-microsoft-com:asm.v2" xmlns:asm.v1="urn:schemas-microsoft-com:asm.v1" xmlns:xrml="http://www.xrml.org/schema/2001/11/xrml2core" xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#" targetNamespace="urn:schemas-microsoft-com:asm.v1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:import namespace="urn:schemas-microsoft-com:asm.v2" schemaLocation="manifest.2.0.0.15-pre.adaptive_elements.xsd" />
+  <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.0.0.0.2.xsd" />
+  <xs:import namespace="http://www.xrml.org/schema/2001/11/xrml2core" schemaLocation="xrml2core.0.0.0.1.xsd" />
+  <xs:import namespace="urn:mpeg:mpeg21:2003:01-REL-R-NS" schemaLocation="mpeg-r.0.0.0.1.xsd" />
+  <xs:simpleType name="twoPartVersionType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(0*[0-9]{1,4}|0*[1-5][0-9]{4}|0*6[0-4][0-9]{3}|0*65[0-4][0-9]{2}|0*655[0-2][0-9]|0*6553[0-5])\.(0*[0-9]{1,4}|0*[1-5][0-9]{4}|0*6[0-4][0-9]{3}|0*65[0-4][0-9]{2}|0*655[0-2][0-9]|0*6553[0-5])" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="fourPartVersionType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="(0*[0-9]{1,4}|0*[1-5][0-9]{4}|0*6[0-4][0-9]{3}|0*65[0-4][0-9]{2}|0*655[0-2][0-9]|0*6553[0-5])\.(0*[0-9]{1,4}|0*[1-5][0-9]{4}|0*6[0-4][0-9]{3}|0*65[0-4][0-9]{2}|0*655[0-2][0-9]|0*6553[0-5])\.(0*[0-9]{1,4}|0*[1-5][0-9]{4}|0*6[0-4][0-9]{3}|0*65[0-4][0-9]{2}|0*655[0-2][0-9]|0*6553[0-5])\.(0*[0-9]{1,4}|0*[1-5][0-9]{4}|0*6[0-4][0-9]{3}|0*65[0-4][0-9]{2}|0*655[0-2][0-9]|0*6553[0-5])" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TwoByteVersion">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="65535" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OneByteVersion">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0" />
+      <xs:maxInclusive value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yesNoType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes" />
+      <xs:enumeration value="no" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="yesNoBoolType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes" />
+      <xs:enumeration value="no" />
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="hashAlgorithmType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SHA1" />
+      <xs:enumeration value="SHA" />
+      <xs:enumeration value="MD5" />
+      <xs:enumeration value="MD4" />
+      <xs:enumeration value="MD2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="publicKeyTokenType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9]|[a-f]|[A-F]){16}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GuidType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\{[0-9A-Fa-f]{8}\-[0-9A-Fa-f]{4}\-[0-9A-Fa-f]{4}\-[0-9A-Fa-f]{4}\-[0-9A-Fa-f]{12}\}" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="processorArchitectureType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="x86" />
+      <xs:enumeration value="ia64" />
+      <xs:enumeration value="amd64" />
+      <xs:enumeration value="wow64" />
+      <xs:enumeration value="msil" />
+      <xs:enumeration value="shx" />
+      <xs:enumeration value="arm" />
+      <xs:enumeration value="data" />
+      <xs:enumeration value="neutral" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ThreadingModelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Apartment" />
+      <xs:enumeration value="Free" />
+      <xs:enumeration value="Single" />
+      <xs:enumeration value="Both" />
+      <xs:enumeration value="Neutral" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="assemblyIdentityType">
+    <xs:complexContent>
+      <xs:extension base="identityType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="assemblyIdentityReference">
+    <xs:complexContent>
+      <xs:extension base="assemblyIdentityType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="dependencyType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="dependentAssembly" type="dependentAssemblyType" />
+        <xs:element ref="asm.v2:dependentOS"></xs:element>
+        <xs:any namespace="urn:schemas-microsoft-com:asm.v3" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xs:any>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="optional" type="yesNoBoolType" use="optional"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="clrClassType">
+    <xs:complexContent>
+      <xs:extension base="comClassType">
+        <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+        <xs:attribute name="runtimeVersion" type="xs:string" use="optional"></xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="clrSurrogateType">
+    <xs:attribute name="clsid" type="GuidType" use="required"></xs:attribute>
+    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="runtimeVersion" type="xs:string" use="optional"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="comInterfaceProxyStubType" mixed="true">
+    <xs:attribute name="iid" type="GuidType" use="required"></xs:attribute>
+    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="tlbid" type="GuidType" use="optional"></xs:attribute>
+    <xs:attribute name="numMethods" type="xs:integer" use="optional"></xs:attribute>
+    <xs:attribute name="proxyStubClsid32" type="GuidType" use="optional"></xs:attribute>
+    <xs:attribute name="baseInterface" type="GuidType" use="optional"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="comInterfaceExternalProxyStubType">
+    <xs:attribute name="iid" type="GuidType" use="required"></xs:attribute>
+    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="tlbid" type="GuidType" use="optional"></xs:attribute>
+    <xs:attribute name="numMethods" type="xs:unsignedInt" use="optional" default="0"></xs:attribute>
+    <xs:attribute name="proxyStubClsid32" type="GuidType" use="optional"></xs:attribute>
+    <xs:attribute name="baseInterface" type="GuidType" use="optional"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="typelibType">
+    <xs:attribute name="tlbid" type="GuidType" use="required"></xs:attribute>
+    <xs:attribute name="version" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="helpdir" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="resourceid" type="xs:string" use="optional"></xs:attribute>
+    <xs:attribute name="flags" type="xs:string" use="optional"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="comClassType">
+    <xs:sequence minOccurs="0">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="progid">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:anyAttribute namespace="##other" processContents="lax" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xs:any>
+    </xs:sequence>
+    <xs:attribute name="clsid" type="GuidType" use="required"></xs:attribute>
+    <xs:attribute name="threadingModel" type="ThreadingModelType" default="Single"></xs:attribute>
+    <xs:attribute name="progid" type="xs:string"></xs:attribute>
+    <xs:attribute name="tlbid" type="GuidType"></xs:attribute>
+    <xs:attribute name="description" type="xs:string"></xs:attribute>
+    <xs:attribute name="miscStatus" type="xs:string" use="optional" />
+    <xs:attribute name="miscStatusIcon" type="xs:string" use="optional" />
+    <xs:attribute name="miscStatusContent" type="xs:string" use="optional" />
+    <xs:attribute name="miscStatusDocPrint" type="xs:string" use="optional" />
+    <xs:attribute name="miscStatusThumbnail" type="xs:string" use="optional" />
+    <xs:attribute name="auxUserTypeFull" type="xs:string" use="optional" />
+    <xs:attribute name="auxUserTypeShort" type="xs:string" use="optional" />
+    <xs:attribute name="auxUserTypeAppName" type="xs:string" use="optional" />
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="windowClassType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="versioned" type="yesNoType" use="optional"></xs:attribute>
+        <xs:anyAttribute namespace="##other" processContents="lax" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="fileType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="comClass" type="comClassType" />
+      <xs:element name="comInterfaceProxyStub" type="comInterfaceProxyStubType" />
+      <xs:element name="typelib">
+        <xs:complexType mixed="true">
+          <xs:complexContent mixed="true">
+            <xs:extension base="typelibType" />
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="windowClass" type="windowClassType" />
+      <xs:element ref="asm.v2:hash"></xs:element>
+      <xs:any namespace="urn:schemas-microsoft-com:asm.v3" processContents="lax" minOccurs="0"></xs:any>
+    </xs:choice>
+    <xs:attribute name="name" type="xs:string" use="optional"></xs:attribute>
+    <xs:attribute name="hash" type="xs:hexBinary" use="optional"></xs:attribute>
+    <xs:attribute name="hashalg" type="hashAlgorithmType" use="optional"></xs:attribute>
+    <xs:attribute name="size" type="xs:unsignedLong" use="optional"></xs:attribute>
+    <xs:attribute use="optional" default="false" ref="asm.v2:optional"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:group"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:writeableType"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="baseDependencyType" abstract="true">
+    <xs:attribute name="optional" type="xs:boolean" use="optional" default="false"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="identityType">
+    <xs:attribute name="name" type="xs:string" use="required"></xs:attribute>
+    <xs:attribute name="version" type="fourPartVersionType" use="optional"></xs:attribute>
+    <xs:attribute name="type" type="xs:string" use="optional"></xs:attribute>
+    <xs:attribute name="processorArchitecture" type="processorArchitectureType" use="optional"></xs:attribute>
+    <xs:attribute name="publicKeyToken" type="publicKeyTokenType" use="optional"></xs:attribute>
+    <xs:attribute name="language" type="xs:string" use="optional"></xs:attribute>
+    <xs:anyAttribute namespace="##any" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="identityReferenceType">
+    <xs:complexContent>
+      <xs:extension base="identityType" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:attributeGroup name="commonAttributesGroup">
+    <xs:attribute name="manifestVersion" type="twoPartVersionType" use="required" fixed="1.0"></xs:attribute>
+  </xs:attributeGroup>
+  <xs:complexType name="dependentAssemblyType">
+    <xs:sequence>
+      <xs:element name="assemblyIdentity" type="assemblyIdentityReference" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref="asm.v2:hash"></xs:element>
+      <xs:any namespace="urn:schemas-microsoft-com:asm.v3" processContents="lax" minOccurs="0" maxOccurs="unbounded"></xs:any>
+    </xs:sequence>
+    <xs:attribute use="optional" default="preRequisite" ref="asm.v2:dependencyType"></xs:attribute>
+    <xs:attribute ref="asm.v2:codebase"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:size"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:hash"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:hashalg"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:group"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:description"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:supportUrl"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:resourceFallbackCulture"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:resourceFallbackCultureInternal"></xs:attribute>
+    <xs:attribute use="optional" default="false" ref="asm.v2:allowDelayedBinding"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="assemblyType">
+    <xs:sequence>
+      <xs:choice minOccurs="0">
+        <xs:element name="noInherit">
+          <xs:complexType>
+            <xs:anyAttribute namespace="##other" processContents="lax" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="asm.v2:noInherit"></xs:element>
+        <xs:element name="noInheritable">
+          <xs:complexType>
+            <xs:anyAttribute namespace="##other" processContents="lax" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="asm.v2:noInheritable"></xs:element>
+      </xs:choice>
+      <xs:element name="assemblyIdentity" type="assemblyIdentityType"></xs:element>
+      <xs:element name="description" type="descriptionType" minOccurs="0"></xs:element>
+      <xs:element minOccurs="0" ref="asm.v2:description"></xs:element>
+      <xs:sequence minOccurs="0">
+        <xs:element minOccurs="0" ref="asm.v2:application"></xs:element>
+      </xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dependency" type="dependencyType"></xs:element>
+        <xs:element ref="asm.v2:dependency"></xs:element>
+        <xs:element name="file" type="fileType"></xs:element>
+        <xs:element ref="asm.v2:file"></xs:element>
+        <xs:element ref="asm.v2:configuration"></xs:element>
+        <xs:element ref="asm.v2:deployment"></xs:element>
+        <xs:element ref="asm.v2:entryPoint"></xs:element>
+        <xs:element ref="asm.v2:trustInfo"></xs:element>
+        <xs:element ref="asm.v2:licensing"></xs:element>
+        <xs:element minOccurs="0" ref="asm.v2:migration"></xs:element>
+        <xs:element name="clrClass" type="clrClassType"></xs:element>
+        <xs:element ref="asm.v2:clrClass"></xs:element>
+        <xs:element name="clrSurrogate" type="clrSurrogateType"></xs:element>
+        <xs:element ref="asm.v2:clrSurrogate"></xs:element>
+        <xs:element name="comInterfaceExternalProxyStub" type="comInterfaceExternalProxyStubType"></xs:element>
+        <xs:element ref="asm.v2:comInterfaceExternalProxyStub"></xs:element>
+        <xs:element ref="asm.v2:KeyInfo"></xs:element>
+        <xs:element ref="ds:Signature"></xs:element>
+        <xs:any namespace="urn:schemas-microsoft-com:asm.v3" processContents="skip" minOccurs="0"></xs:any>
+        <xs:element minOccurs="0" ref="asm.v2:publisherIdentity" />
+      </xs:choice>
+    </xs:sequence>
+    <xs:attributeGroup ref="commonAttributesGroup" />
+  </xs:complexType>
+  <xs:element name="assembly">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="assemblyType" />
+      </xs:complexContent>
+    </xs:complexType>
+    <xs:key name="fileNameKey_asm.v1">
+      <xs:selector xpath="file" />
+      <xs:field xpath="@name" />
+    </xs:key>
+  </xs:element>
+  <xs:complexType name="descriptionType" mixed="true">
+    <xs:attribute use="optional" ref="asm.v2:publisher"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:product"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:supportUrl"></xs:attribute>
+    <xs:attribute use="optional" ref="asm.v2:iconFile"></xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+  <xs:complexType name="publisherIdentityType">
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="issuerKeyHash" type="xs:string" />
+    <xs:anyAttribute namespace="##other" processContents="lax" />
+  </xs:complexType>
+</xs:schema>

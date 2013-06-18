@@ -1,0 +1,55 @@
+﻿namespace System.Workflow.Activities.Rules
+{
+    using System;
+
+    internal enum TokenID
+    {
+        Unknown,
+        Identifier,
+        Dot,
+        Comma,
+        LParen,
+        RParen,
+        Plus,
+        Minus,
+        Divide,
+        Multiply,
+        Modulus,
+        BitAnd,
+        BitOr,
+        And,
+        Or,
+        Not,
+        Equal,
+        NotEqual,
+        Less,
+        LessEqual,
+        Greater,
+        GreaterEqual,
+        StringLiteral,
+        CharacterLiteral,
+        IntegerLiteral,
+        DecimalLiteral,
+        FloatLiteral,
+        True,
+        False,
+        Null,
+        This,
+        In,
+        Out,
+        Ref,
+        Assign,
+        TypeName,
+        Update,
+        Halt,
+        Semicolon,
+        LBracket,
+        RBracket,
+        LCurlyBrace,
+        RCurlyBrace,
+        New,
+        Illegal,
+        EndOfInput
+    }
+}
+

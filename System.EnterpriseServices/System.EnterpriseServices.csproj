@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>63c8de52-6e80-469c-a634-8040206c5a48</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="Microsoft.VisualC" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionVote.cs" />
+    <Compile Include="System\EnterpriseServices\IContextState.cs" />
+    <Compile Include="System\EnterpriseServices\DtcIsolationLevel.cs" />
+    <Compile Include="System\EnterpriseServices\IContextTransactionInfo.cs" />
+    <Compile Include="System\EnterpriseServices\IGetContextProperties.cs" />
+    <Compile Include="System\EnterpriseServices\IContextProperties.cs" />
+    <Compile Include="System\EnterpriseServices\IObjectConstruct.cs" />
+    <Compile Include="System\EnterpriseServices\IObjectConstructString.cs" />
+    <Compile Include="System\EnterpriseServices\IObjectContext.cs" />
+    <Compile Include="System\EnterpriseServices\IDispatchContext.cs" />
+    <Compile Include="System\EnterpriseServices\SecurityProperty.cs" />
+    <Compile Include="System\EnterpriseServices\IObjectContextInfo.cs" />
+    <Compile Include="System\EnterpriseServices\IObjectContextInfo2.cs" />
+    <Compile Include="System\EnterpriseServices\IObjectControl.cs" />
+    <Compile Include="System\EnterpriseServices\IPlaybackControl.cs" />
+    <Compile Include="System\EnterpriseServices\BOID.cs" />
+    <Compile Include="System\EnterpriseServices\XACTTRANSINFO.cs" />
+    <Compile Include="System\EnterpriseServices\ITransaction.cs" />
+    <Compile Include="System\EnterpriseServices\ITransactionProxy.cs" />
+    <Compile Include="System\EnterpriseServices\ITransactionVoterBallotAsync2.cs" />
+    <Compile Include="System\EnterpriseServices\ITransactionOutcomeEvents.cs" />
+    <Compile Include="System\EnterpriseServices\ITransactionVoterNotifyAsync2.cs" />
+    <Compile Include="System\EnterpriseServices\PropertyLockMode.cs" />
+    <Compile Include="System\EnterpriseServices\PropertyReleaseMode.cs" />
+    <Compile Include="System\EnterpriseServices\ISharedProperty.cs" />
+    <Compile Include="System\EnterpriseServices\ISharedPropertyGroup.cs" />
+    <Compile Include="System\EnterpriseServices\ISharedPropertyGroupManager.cs" />
+    <Compile Include="System\EnterpriseServices\xSharedPropertyGroupManager.cs" />
+    <Compile Include="System\EnterpriseServices\SharedProperty.cs" />
+    <Compile Include="System\EnterpriseServices\SharedPropertyGroup.cs" />
+    <Compile Include="System\EnterpriseServices\SharedPropertyGroupManager.cs" />
+    <Compile Include="System\EnterpriseServices\IRemoteDispatch.cs" />
+    <Compile Include="System\EnterpriseServices\IServicedComponentInfo.cs" />
+    <Compile Include="System\EnterpriseServices\IManagedObject.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponent.cs" />
+    <Compile Include="System\EnterpriseServices\IManagedPoolAction.cs" />
+    <Compile Include="System\EnterpriseServices\ProxyTearoff.cs" />
+    <Compile Include="System\EnterpriseServices\ClassicProxyTearoff.cs" />
+    <Compile Include="System\EnterpriseServices\WeakProxyTearoff.cs" />
+    <Compile Include="System\EnterpriseServices\IManagedObjectInfo.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponentStub.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponentProxy.cs" />
+    <Compile Include="System\EnterpriseServices\MethodCallMessageWrapperEx.cs" />
+    <Compile Include="System\EnterpriseServices\RemoteServicedComponentProxy.cs" />
+    <Compile Include="System\EnterpriseServices\BlindMBRO.cs" />
+    <Compile Include="System\EnterpriseServices\RemotingIntermediary.cs" />
+    <Compile Include="System\EnterpriseServices\IntermediaryObjRef.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponentProxyAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\InterlockedStack.cs" />
+    <Compile Include="System\EnterpriseServices\ComSurrogateSelector.cs" />
+    <Compile Include="System\EnterpriseServices\ComObjRef.cs" />
+    <Compile Include="System\EnterpriseServices\ComponentSerializer.cs" />
+    <Compile Include="System\EnterpriseServices\ComponentServices.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponentException.cs" />
+    <Compile Include="System\EnterpriseServices\SCUnMarshaler.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponentMarshaler.cs" />
+    <Compile Include="System\EnterpriseServices\FastRSCPObjRef.cs" />
+    <Compile Include="System\EnterpriseServices\SCMChannelInfo.cs" />
+    <Compile Include="System\EnterpriseServices\SCMTypeName.cs" />
+    <Compile Include="System\EnterpriseServices\IdentityTable.cs" />
+    <Compile Include="System\EnterpriseServices\Cachetable.cs" />
+    <Compile Include="System\EnterpriseServices\ReflectionCache.cs" />
+    <Compile Include="System\EnterpriseServices\IContext.cs" />
+    <Compile Include="System\EnterpriseServices\IManagedActivationEvents.cs" />
+    <Compile Include="System\EnterpriseServices\ITxStreamInternal.cs" />
+    <Compile Include="System\EnterpriseServices\ITransactionProperty.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionProxyException.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionProxy.cs" />
+    <Compile Include="System\EnterpriseServices\VoterBallot.cs" />
+    <Compile Include="System\EnterpriseServices\ContextUtil.cs" />
+    <Compile Include="System\EnterpriseServices\ISecurityCallersColl.cs" />
+    <Compile Include="System\EnterpriseServices\ISecurityIdentityColl.cs" />
+    <Compile Include="System\EnterpriseServices\ISecurityCallContext.cs" />
+    <Compile Include="System\EnterpriseServices\SecurityIdentity.cs" />
+    <Compile Include="System\EnterpriseServices\SecurityIdentityEnumerator.cs" />
+    <Compile Include="System\EnterpriseServices\SecurityCallers.cs" />
+    <Compile Include="System\EnterpriseServices\SecurityCallContext.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ApplicationInstallOptions.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ApplicationExportOptions.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\AuthenticationCapabilitiesOptions.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ServiceStatusOptions.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\FileFlags.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ComponentFlags.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\Bitness.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\IComponentUtil.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\IRoleAssociationUtil.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ICatalog.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ICatalog2.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ICatalogObject.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\ICatalogCollection.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\xCatalog.cs" />
+    <Compile Include="System\EnterpriseServices\Admin\CollectionName.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionOption.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionIsolationLevel.cs" />
+    <Compile Include="System\EnterpriseServices\SynchronizationOption.cs" />
+    <Compile Include="System\EnterpriseServices\ActivationOption.cs" />
+    <Compile Include="System\EnterpriseServices\IConfigurationAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\IProcessInitializer.cs" />
+    <Compile Include="System\EnterpriseServices\IProcessInitControl.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\JustInTimeActivationAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\SynchronizationAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\MustRunInClientContextAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ConstructionEnabledAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ObjectPoolingAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\COMTIIntrinsicsAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\IISIntrinsicsAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\EventTrackingEnabledAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ExceptionClassAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\LoadBalancingSupportedAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\EventClassAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\PrivateComponentAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\AutoCompleteAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ApplicationActivationAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ApplicationNameAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ApplicationIDAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ApplicationQueuingAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\InterfaceQueuingAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\DescriptionAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\ServicedComponentInfo.cs" />
+    <Compile Include="System\EnterpriseServices\InstallationFlags.cs" />
+    <Compile Include="System\EnterpriseServices\ClassTypes.cs" />
+    <Compile Include="System\EnterpriseServices\ICatalogServices.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationErrorInfo.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationException.cs" />
+    <Compile Include="System\EnterpriseServices\Report.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationExporterNotifySink.cs" />
+    <Compile Include="System\EnterpriseServices\ICreateTypeLib.cs" />
+    <Compile Include="System\EnterpriseServices\ApplicationSpec.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationDriver.cs" />
+    <Compile Include="System\EnterpriseServices\Wow64Helper.cs" />
+    <Compile Include="System\EnterpriseServices\IRegistrationHelper.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationConfig.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationThreadWrapper.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationHelper.cs" />
+    <Compile Include="System\EnterpriseServices\CatalogSync.cs" />
+    <Compile Include="System\EnterpriseServices\RegistrationHelperTx.cs" />
+    <Compile Include="System\EnterpriseServices\ComponentAccessControlAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\AccessChecksLevelOption.cs" />
+    <Compile Include="System\EnterpriseServices\AuthenticationOption.cs" />
+    <Compile Include="System\EnterpriseServices\ImpersonationLevelOption.cs" />
+    <Compile Include="System\EnterpriseServices\ApplicationAccessControlAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\SecurityRoleAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\SecureMethodAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\Perf.cs" />
+    <Compile Include="System\EnterpriseServices\Util.cs" />
+    <Compile Include="System\EnterpriseServices\BaseSwitch.cs" />
+    <Compile Include="System\EnterpriseServices\BooleanSwitch.cs" />
+    <Compile Include="System\EnterpriseServices\TraceSwitch.cs" />
+    <Compile Include="System\EnterpriseServices\TraceLevel.cs" />
+    <Compile Include="System\EnterpriseServices\DBG.cs" />
+    <Compile Include="System\EnterpriseServices\Resource.cs" />
+    <Compile Include="System\EnterpriseServices\IConfigCallback.cs" />
+    <Compile Include="System\EnterpriseServices\ComponentConfigCallback.cs" />
+    <Compile Include="System\EnterpriseServices\InterfaceConfigCallback.cs" />
+    <Compile Include="System\EnterpriseServices\MethodConfigCallback.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\LogRecordFlags.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\CompensatorOptions.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\TransactionState.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\_ICompensator.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\_IMonitorLogRecords.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\_IFormatLogRecords.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\IFormatLogRecords.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\BlobPackage.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\Packager.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\LogRecord.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\Compensator.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\Clerk.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\_IMonitorClerks.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\ClerkMonitorEnumerator.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\ClerkMonitor.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\ClerkInfo.cs" />
+    <Compile Include="System\EnterpriseServices\CompensatingResourceManager\ApplicationCrmEnabledAttribute.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IAssemblyLocator.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\AssemblyLocator.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IAppDomainHelper.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\AppDomainHelper.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IComManagedImportUtil.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ComManagedImportUtil.cs" />
+    <Compile Include="System\EnterpriseServices\IObjPool.cs" />
+    <Compile Include="System\EnterpriseServices\ITransactionResourcePool.cs" />
+    <Compile Include="System\EnterpriseServices\ResourcePool.cs" />
+    <Compile Include="System\EnterpriseServices\ICreateWithTipTransactionEx.cs" />
+    <Compile Include="System\EnterpriseServices\ICreateWithTransactionEx.cs" />
+    <Compile Include="System\EnterpriseServices\ICreateWithLocalTransaction.cs" />
+    <Compile Include="System\EnterpriseServices\xByotServer.cs" />
+    <Compile Include="System\EnterpriseServices\BYOT.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IComSoapPublisher.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IComSoapIISVRoot.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IComSoapMetadata.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IServerWebConfig.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IApplicationContext.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IAssemblyName.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IAssemblyCacheItem.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IAssemblyCache.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ITypeLib2.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\REGKIND.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ComSoapPublishError.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ClientRemotingConfig.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\HomePage.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\DiscoFile.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ServerWebConfig.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IISVirtualRoot.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\CacheInfo.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\AssemblyManager.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\Publish.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\GenerateMetadata.cs" />
+    <Compile Include="Microsoft\Runtime\Hosting\StrongNameHelpers.cs" />
+    <Compile Include="Microsoft\Runtime\Hosting\IClrStrongNameUsingIntPtr.cs" />
+    <Compile Include="Microsoft\Runtime\Hosting\IClrStrongName.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IClrObjectFactory.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ClrObjectFactory.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\NativeMethods.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SafeUserTokenHandle.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\GenAssemblyFromWsdl.cs" />
+    <Compile Include="System\EnterpriseServices\RWHashTable.cs" />
+    <Compile Include="System\EnterpriseServices\RWHashTableEx.cs" />
+    <Compile Include="System\EnterpriseServices\ThreadPoolOption.cs" />
+    <Compile Include="System\EnterpriseServices\TransactionStatus.cs" />
+    <Compile Include="System\EnterpriseServices\InheritanceOption.cs" />
+    <Compile Include="System\EnterpriseServices\BindingOption.cs" />
+    <Compile Include="System\EnterpriseServices\SxsOption.cs" />
+    <Compile Include="System\EnterpriseServices\PartitionOption.cs" />
+    <Compile Include="System\EnterpriseServices\ServiceConfig.cs" />
+    <Compile Include="System\EnterpriseServices\ServiceDomain.cs" />
+    <Compile Include="System\EnterpriseServices\IServiceCall.cs" />
+    <Compile Include="System\EnterpriseServices\IAsyncErrorNotify.cs" />
+    <Compile Include="System\EnterpriseServices\Activity.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ISoapServerVRoot.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapServerVRoot.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\IISVirtualRootEx.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapServerConfig.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ISoapClientImport.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapClientImport.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapClientConfig.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ISoapUtility.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapUtility.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\NonRootVRootException.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapServerInfo.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\ISoapServerTlb.cs" />
+    <Compile Include="System\EnterpriseServices\Internal\SoapServerTlb.cs" />
+    <EmbeddedResource Include="System.EnterpriseServices.resources" />
+  </ItemGroup>
+</Project>

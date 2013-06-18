@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f49a2ba8-2111-451a-a62b-f2c47e93fb0c</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\ServiceProcess\NativeMethods.cs" />
+    <Compile Include="System\ServiceProcess\PowerBroadcastStatus.cs" />
+    <Compile Include="System\ServiceProcess\SafeNativeMethods.cs" />
+    <Compile Include="System\ServiceProcess\ServiceAccount.cs" />
+    <Compile Include="System\ServiceProcess\ServiceBase.cs" />
+    <Compile Include="System\ServiceProcess\ServiceController.cs" />
+    <Compile Include="System\ServiceProcess\ServiceControllerPermission.cs" />
+    <Compile Include="System\ServiceProcess\ServiceControllerPermissionAccess.cs" />
+    <Compile Include="System\ServiceProcess\ServiceControllerPermissionAttribute.cs" />
+    <Compile Include="System\ServiceProcess\ServiceControllerPermissionEntry.cs" />
+    <Compile Include="System\ServiceProcess\ServiceControllerPermissionEntryCollection.cs" />
+    <Compile Include="System\ServiceProcess\ServiceControllerStatus.cs" />
+    <Compile Include="System\ServiceProcess\ServiceInstaller.cs" />
+    <Compile Include="System\ServiceProcess\ServiceProcessDescriptionAttribute.cs" />
+    <Compile Include="System\ServiceProcess\ServiceProcessInstaller.cs" />
+    <Compile Include="System\ServiceProcess\ServiceStartMode.cs" />
+    <Compile Include="System\ServiceProcess\ServiceType.cs" />
+    <Compile Include="System\ServiceProcess\SessionChangeReason.cs" />
+    <Compile Include="System\ServiceProcess\SessionChangeDescription.cs" />
+    <Compile Include="System\ServiceProcess\TimeoutException.cs" />
+    <Compile Include="System\ServiceProcess\Design\ServiceInstallerDialogResult.cs" />
+    <Compile Include="System\ServiceProcess\Design\ServiceInstallerDialog.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="ThisAssembly.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="System\ServiceProcess\ResDescriptionAttribute.cs" />
+    <Compile Include="System\ServiceProcess\ResCategoryAttribute.cs" />
+    <Compile Include="System\ServiceProcess\Res.cs" />
+    <Compile Include="System\ExternDll.cs" />
+    <Compile Include="System\HResults.cs" />
+    <Compile Include="SafeServiceHandle.cs" />
+    <Compile Include="System\ServiceProcess\UnsafeNativeMethods.cs" />
+    <Compile Include="System\ServiceProcess\Design\ServiceNameConverter.cs" />
+    <EmbeddedResource Include="System.ServiceProcess.resources" />
+    <EmbeddedResource Include="System.ServiceProcess.ServiceController.bmp" />
+    <EmbeddedResource Include="System.ServiceProcess.Design.ServiceInstallerDialog.resources" />
+  </ItemGroup>
+</Project>

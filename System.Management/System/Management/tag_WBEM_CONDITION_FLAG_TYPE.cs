@@ -1,0 +1,24 @@
+﻿namespace System.Management
+{
+    using System;
+
+    internal enum tag_WBEM_CONDITION_FLAG_TYPE
+    {
+        WBEM_FLAG_ALWAYS = 0,
+        WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES = 0x200,
+        WBEM_FLAG_CLASS_OVERRIDES_ONLY = 0x100,
+        WBEM_FLAG_KEYS_ONLY = 4,
+        WBEM_FLAG_LOCAL_ONLY = 0x10,
+        WBEM_FLAG_NONSYSTEM_ONLY = 0x40,
+        WBEM_FLAG_ONLY_IF_FALSE = 2,
+        WBEM_FLAG_ONLY_IF_IDENTICAL = 3,
+        WBEM_FLAG_ONLY_IF_TRUE = 1,
+        WBEM_FLAG_PROPAGATED_ONLY = 0x20,
+        WBEM_FLAG_REFS_ONLY = 8,
+        WBEM_FLAG_SYSTEM_ONLY = 0x30,
+        WBEM_MASK_CLASS_CONDITION = 0x300,
+        WBEM_MASK_CONDITION_ORIGIN = 0x70,
+        WBEM_MASK_PRIMARY_CONDITION = 3
+    }
+}
+

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>386fa26d-da36-427a-94fb-49e4aa090998</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Microsoft.VisualBasic</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\Internal\SkuSafeHttpContext.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\Internal\ContextValue!1.cs" />
+    <Compile Include="Microsoft\VisualBasic\Logging\Log.cs" />
+    <Compile Include="Microsoft\VisualBasic\Logging\AspLog.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\ApplicationBase.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\AssemblyInfo.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\ConsoleApplicationBase.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\User.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\BuiltInRole.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\BuiltInRoleConverter.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\WebUser.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\AuthenticationMode.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\ShutdownMode.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\UnhandledExceptionEventArgs.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\StartupEventArgs.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\StartupNextInstanceEventArgs.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\StartupEventHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\StartupNextInstanceEventHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\ShutdownEventHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\UnhandledExceptionEventHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\NoStartupFormException.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\CantStartSingleInstanceException.cs" />
+    <Compile Include="Microsoft\VisualBasic\ApplicationServices\WindowsFormsApplicationBase.cs" />
+    <Compile Include="Microsoft\VisualBasic\Collection.cs" />
+    <Compile Include="Microsoft\VisualBasic\Constants.cs" />
+    <Compile Include="Microsoft\VisualBasic\ControlChars.cs" />
+    <Compile Include="Microsoft\VisualBasic\Conversion.cs" />
+    <Compile Include="Microsoft\VisualBasic\DateAndTime.cs" />
+    <Compile Include="Microsoft\VisualBasic\AudioPlayMode.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Audio.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Clock.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Computer.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\ComputerInfo.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Keyboard.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Mouse.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\NetworkAvailableEventArgs.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\NetworkAvailableEventHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Network.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\Ports.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\ServerComputer.cs" />
+    <Compile Include="Microsoft\VisualBasic\ErrObject.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\FileSystem.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\DeleteDirectoryOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\RecycleOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\SearchOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\UICancelOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\UIOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\MalformedLineException.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\SpecialDirectories.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\TextFieldParser.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\FieldType.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileSystem.cs" />
+    <Compile Include="Microsoft\VisualBasic\Financial.cs" />
+    <Compile Include="Microsoft\VisualBasic\VariantType.cs" />
+    <Compile Include="Microsoft\VisualBasic\AppWinStyle.cs" />
+    <Compile Include="Microsoft\VisualBasic\CallType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompareMethod.cs" />
+    <Compile Include="Microsoft\VisualBasic\DateFormat.cs" />
+    <Compile Include="Microsoft\VisualBasic\FirstDayOfWeek.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\FirstWeekOfYear.cs" />
+    <Compile Include="Microsoft\VisualBasic\VbStrConv.cs" />
+    <Compile Include="Microsoft\VisualBasic\TriState.cs" />
+    <Compile Include="Microsoft\VisualBasic\DateInterval.cs" />
+    <Compile Include="Microsoft\VisualBasic\DueDate.cs" />
+    <Compile Include="Microsoft\VisualBasic\OpenMode.cs" />
+    <Compile Include="Microsoft\VisualBasic\OpenAccess.cs" />
+    <Compile Include="Microsoft\VisualBasic\OpenShare.cs" />
+    <Compile Include="Microsoft\VisualBasic\TabInfo.cs" />
+    <Compile Include="Microsoft\VisualBasic\SpcInfo.cs" />
+    <Compile Include="Microsoft\VisualBasic\MsgBoxResult.cs" />
+    <Compile Include="Microsoft\VisualBasic\MsgBoxStyle.cs" />
+    <Compile Include="Microsoft\VisualBasic\VBFixedStringAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\VBFixedArrayAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\ComClassAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyGroupCollectionAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\HideModuleNameAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\Globals.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\StandardModuleAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\OptionTextAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\OptionCompareAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\DesignerGeneratedAttribute.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\BooleanType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ByteType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\CharArrayType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\CharType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\Conversions.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\DateType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\DecimalType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\DoubleType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ExceptionUtils.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\InternalErrorException.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\FlowControl.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ObjectFlowControl.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IVbHost.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\HostServices.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IntegerType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\LateBinding.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\LikeOperator.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\LongType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\NativeMethods.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\NativeTypes.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\NewLateBinding.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ObjectType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\Operators.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ProjectData.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ShortType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\SingleType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\StaticLocalInitFlag.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IncompleteInitialization.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\StringType.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\Symbols.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\UnsafeNativeMethods.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\Utils.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\SafeMemoryMappedViewOfFileHandle.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\Versioned.cs" />
+    <Compile Include="Microsoft\VisualBasic\Information.cs" />
+    <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
+    <Compile Include="Microsoft\VisualBasic\Logging\LogFileLocation.cs" />
+    <Compile Include="Microsoft\VisualBasic\Logging\LogFileCreationScheduleOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\Logging\DiskSpaceExhaustedOption.cs" />
+    <Compile Include="Microsoft\VisualBasic\Logging\FileLogTraceListener.cs" />
+    <Compile Include="Microsoft\VisualBasic\VBMath.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\ClipboardProxy.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\FileSystemProxy.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\RegistryProxy.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\SpecialDirectoriesProxy.cs" />
+    <Compile Include="Microsoft\VisualBasic\Strings.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\_Version.cs" />
+    <Compile Include="Microsoft\VisualBasic\Devices\WebClientExtended.cs" />
+    <Compile Include="Microsoft\VisualBasic\FileIO\QuoteDelimitedFieldBuilder.cs" />
+    <Compile Include="Microsoft\VisualBasic\OpenModeTypes.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ConversionResolution.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\OperatorCaches.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\vbErrors.cs" />
+    <Compile Include="Microsoft\VisualBasic\ForEachEnum.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IDOBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBCallBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBGetBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBInvokeBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBInvokeDefaultBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBInvokeDefaultFallbackBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBSetBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBSetComplexBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBGetMemberBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBConversionBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBUnaryOperatorBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBBinaryOperatorBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBIndexSetBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBIndexSetComplexBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IDOUtils.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\CacheSet!1.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IOUtils.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\OverloadResolution.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\AssemblyData.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\SafeNativeMethods.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\IRecordEnum.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\StructUtils.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VB6BinaryFile.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\tagVT.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VT.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\PutHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\GetHandler.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VB6File.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VB6InputFile.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VB6OutputFile.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VB6RandomFile.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBBinder.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\VBInputBox.cs" />
+    <Compile Include="Microsoft\VisualBasic\CompilerServices\ResID.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\Internal\ProgressDialog.cs" />
+    <Compile Include="Microsoft\VisualBasic\MyServices\Internal\WebClientCopy.cs" />
+    <Compile Include="Microsoft\VisualBasic\FormatInfoHolder.cs" />
+    <EmbeddedResource Include="Microsoft.VisualBasic.MyServices.Internal.ProgressDialog.resources" />
+    <EmbeddedResource Include="Microsoft.VisualBasic.CompilerServices.VBInputBox.resources" />
+    <EmbeddedResource Include="Microsoft.VisualBasic.resources" />
+  </ItemGroup>
+</Project>

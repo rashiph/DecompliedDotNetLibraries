@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>36e265f4-f2f7-41ce-8065-1a99ee37add2</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Runtime.Serialization.Formatters.Soap</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapFormatter.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ISerParser.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapParser.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapHandler.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SerStack.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\NameCacheEntry.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\NameCache.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalFE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalSerializerTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalParseStateE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ObjectReader.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SerObjectInfoInit.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\AttributeList.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapUtil.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapAssemblyInfo.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ITrace.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ParseRecord.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\Util.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ValueFixup.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalSoapMessage.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapAttributeInfo.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\NameInfo.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\PrimitiveArray.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalElementTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalParseTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalObjectTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalObjectPositionE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalArrayTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalMemberTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalMemberValueE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalPrimitiveTypeE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ValueFixupEnum.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\InternalNameSpaceE.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapAttributeType.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\XsdVersion.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\Converter.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SoapWriter.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ObjectWriter.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\WriteObjectInfo.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\ReadObjectInfo.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\SerObjectInfoCache.cs" />
+    <Compile Include="System\Runtime\Serialization\Formatters\Soap\Attr.cs" />
+    <EmbeddedResource Include="SoapFormatter.resources" />
+  </ItemGroup>
+</Project>

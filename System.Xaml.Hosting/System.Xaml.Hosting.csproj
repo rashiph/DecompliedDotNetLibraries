@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>107791e3-b946-4124-8f10-3e178c71dbc8</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Xaml.Hosting</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Xml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Xaml\Hosting\XamlBuildProvider.cs" />
+    <Compile Include="System\Xaml\Hosting\XamlHttpHandlerFactory.cs" />
+    <Compile Include="System\Xaml\Hosting\HostingEnvironmentWrapper.cs" />
+    <Compile Include="System\Xaml\Hosting\Configuration\HandlerElement.cs" />
+    <Compile Include="System\Xaml\Hosting\Configuration\HandlerElementCollection.cs" />
+    <Compile Include="System\Xaml\Hosting\Configuration\XamlHostingSection.cs" />
+    <Compile Include="System\Xaml\Hosting\Configuration\XamlHostingSectionGroup.cs" />
+    <Compile Include="System\Xaml\Hosting\Configuration\XamlHostingConfiguration.cs" />
+    <Compile Include="System\Xaml\Hosting\SR.cs" />
+    <Compile Include="System\Xaml\Hosting\TD.cs" />
+    <Compile Include="System\Xaml\Hosting\FxTrace.cs" />
+    <EmbeddedResource Include="System.Xaml.Hosting.SR.resources" />
+    <EmbeddedResource Include="System.Xaml.Hosting.TD.resources" />
+  </ItemGroup>
+</Project>

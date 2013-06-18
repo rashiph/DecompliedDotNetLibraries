@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f7c1b913-fd25-411d-ae53-cf46bc062a49</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>System.Runtime.DurableInstancing</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="System\Runtime\ActionItem.cs" />
+    <Compile Include="System\Runtime\AssertHelper.cs" />
+    <Compile Include="System\Runtime\AsyncResult.cs" />
+    <Compile Include="System\Runtime\SignalGate.cs" />
+    <Compile Include="System\Runtime\SignalGate!1.cs" />
+    <Compile Include="System\Runtime\AsyncWaitHandle.cs" />
+    <Compile Include="System\Runtime\BackoffTimeoutHelper.cs" />
+    <Compile Include="System\Runtime\BufferedOutputStream.cs" />
+    <Compile Include="System\Runtime\FatalException.cs" />
+    <Compile Include="System\Runtime\CallbackException.cs" />
+    <Compile Include="System\Runtime\CompletedAsyncResult.cs" />
+    <Compile Include="System\Runtime\CompletedAsyncResult!1.cs" />
+    <Compile Include="System\Runtime\CompletedAsyncResult!2.cs" />
+    <Compile Include="System\Runtime\ComputerNameFormat.cs" />
+    <Compile Include="System\Runtime\DiagnosticStrings.cs" />
+    <Compile Include="System\Runtime\DuplicateDetector!1.cs" />
+    <Compile Include="System\Runtime\ExceptionTrace.cs" />
+    <Compile Include="System\Runtime\FastAsyncCallback.cs" />
+    <Compile Include="System\Runtime\Fx.cs" />
+    <Compile Include="System\Runtime\FxCop.cs" />
+    <Compile Include="System\Runtime\HashHelper.cs" />
+    <Compile Include="System\Runtime\ICancelable.cs" />
+    <Compile Include="System\Runtime\InputQueue!1.cs" />
+    <Compile Include="System\Runtime\InternalBufferManager.cs" />
+    <Compile Include="System\Runtime\IOThreadScheduler.cs" />
+    <Compile Include="System\Runtime\IOThreadTimer.cs" />
+    <Compile Include="System\Runtime\IPersistencePipelineModule.cs" />
+    <Compile Include="System\Runtime\NameGenerator.cs" />
+    <Compile Include="System\Runtime\PartialTrustHelpers.cs" />
+    <Compile Include="System\Runtime\PersistenceMetadataNamespace.cs" />
+    <Compile Include="System\Runtime\PersistencePipeline.cs" />
+    <Compile Include="System\Runtime\MruCache!2.cs" />
+    <Compile Include="System\Runtime\ReadOnlyDictionary!2.cs" />
+    <Compile Include="System\Runtime\ReadOnlyKeyedCollection!2.cs" />
+    <Compile Include="System\Runtime\SynchronizedPool!1.cs" />
+    <Compile Include="System\Runtime\ThreadNeutralSemaphore.cs" />
+    <Compile Include="System\Runtime\Ticks.cs" />
+    <Compile Include="System\Runtime\TimeoutHelper.cs" />
+    <Compile Include="System\Runtime\TimeSpanOrInfiniteConverter.cs" />
+    <Compile Include="System\Runtime\TimeSpanOrInfiniteValidator.cs" />
+    <Compile Include="System\Runtime\TraceChannel.cs" />
+    <Compile Include="System\Runtime\TraceEventLevel.cs" />
+    <Compile Include="System\Runtime\TraceEventOpcode.cs" />
+    <Compile Include="System\Runtime\TraceLevelHelper.cs" />
+    <Compile Include="System\Runtime\TracePayload.cs" />
+    <Compile Include="System\Runtime\TypedAsyncResult!1.cs" />
+    <Compile Include="System\Runtime\TypeHelper.cs" />
+    <Compile Include="System\Runtime\UrlUtility.cs" />
+    <Compile Include="System\Runtime\WaitCallbackActionItem.cs" />
+    <Compile Include="System\Runtime\WorkflowNamespace.cs" />
+    <Compile Include="System\Runtime\WorkflowServiceNamespace.cs" />
+    <Compile Include="System\Runtime\XNameTypeConverterHelper.cs" />
+    <Compile Include="System\Runtime\Collections\HopperCache.cs" />
+    <Compile Include="System\Runtime\Collections\ObjectCache!2.cs" />
+    <Compile Include="System\Runtime\Collections\ObjectCacheItem!1.cs" />
+    <Compile Include="System\Runtime\Collections\ObjectCacheSettings.cs" />
+    <Compile Include="System\Runtime\Collections\ValidatingCollection!1.cs" />
+    <Compile Include="System\Runtime\Collections\OrderedDictionary!2.cs" />
+    <Compile Include="System\Runtime\Diagnostics\DiagnosticTrace.cs" />
+    <Compile Include="System\Runtime\Diagnostics\DiagnosticsEventProvider.cs" />
+    <Compile Include="System\Runtime\Diagnostics\DiagnosticTraceSource.cs" />
+    <Compile Include="System\Runtime\Diagnostics\PerformanceCounterNameAttribute.cs" />
+    <Compile Include="System\Runtime\Diagnostics\EventLogger.cs" />
+    <Compile Include="System\Runtime\Diagnostics\EventLogEventId.cs" />
+    <Compile Include="System\Runtime\Diagnostics\EtwProvider.cs" />
+    <Compile Include="System\Runtime\Diagnostics\TraceRecord.cs" />
+    <Compile Include="System\Runtime\Diagnostics\StringTraceRecord.cs" />
+    <Compile Include="System\Runtime\Diagnostics\DictionaryTraceRecord.cs" />
+    <Compile Include="System\Runtime\Interop\UnsafeNativeMethods.cs" />
+    <Compile Include="System\Runtime\Interop\SafeEventLogWriteHandle.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\IDurableInstancingOptions.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistenceException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistenceCommandException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceCollisionException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceCompleteException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceHandle.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceHandleConflictException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceHandleReference.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceKey.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceKeyCollisionException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceKeyCompleteException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceKeyNotReadyException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceKeyState.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceKeyView.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceLockedException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceLockLostException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceStoreQueryResult.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceLockQueryResult.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistenceEvent.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceNormalEvent.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceNotReadyException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceOwner.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceOwnerException.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceOwnerQueryResult.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistence.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistenceCommand.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistenceContext.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstancePersistenceEvent!1.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceState.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceStore.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceValue.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceValueConsistency.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceValueOptions.cs" />
+    <Compile Include="System\Runtime\DurableInstancing\InstanceView.cs" />
+    <Compile Include="System\Runtime\SRCore.cs" />
+    <Compile Include="System\Runtime\TraceCore.cs" />
+    <EmbeddedResource Include="System.Runtime.SRCore.resources" />
+    <EmbeddedResource Include="System.Runtime.TraceCore.resources" />
+  </ItemGroup>
+</Project>
